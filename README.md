@@ -8,12 +8,14 @@ Please contribute samples for systems you have access to :-)
 
 ## Content
 
+Key files include:
+
 - [`output/`](output): The output samples
-- [`molecule/`](molecule): Scenarios for gathering Linux data from within containers (with Podman) and VMs (with KubeVirt)
 - [`gather.yml`](gather.yml): A playbook to gather facts with the `ansible.builtin.setup` module
 - [`vyos-gather.yml`](vyos-gather.yml): Gather facts in VyOS devices with `vyos.vyos.vyos_facts`
-- [`vyos-requirements.txt`](vyos-requirements.txt): Python requirements for `vyos-gather.yml`
-- [`vyos-requirements.yml`](vyos-requirements.yml): Galaxy requirements for `vyos-gather.yml`
+- [`ostest.yml`](ostest.yml): Gather key OS facts, display them, and demonstrate how these can be used for conditional tasks
+- [`parse-samples.yml`](parse-samples.yml): Parse output samples for key OS information, and save results to `output/parse-samples-summary.json`
+- [`molecule/`](molecule): Scenarios for gathering Linux data from within containers (with Podman) and VMs (with KubeVirt)
 
 ## Notes On Specific Targets
 

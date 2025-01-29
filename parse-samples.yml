@@ -1,0 +1,69 @@
+# SPDX-FileCopyrightText: © 2025 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
+# Parse JSON sample output files for key OS information
+# Save results to a JSON file
+---
+- name: 'Parse sample JSON files'
+  hosts: localhost
+  connection: local
+  become: false
+  gather_facts: false
+  vars_files:
+
+    - vars/common.yml
+
+  vars:
+
+    search_basepath: "{{ playbook_dir }}/{{ local_save_basedir }}/"
+    search_paths:
+      - "{{ search_basepath }}linux"
+      - "{{ search_basepath }}darwin"
+      - "{{ search_basepath }}aix"
+      - "{{ search_basepath }}win32nt"
+
+  tasks:
+
+    - name: 'Count how many characters to cut from start of file names'
+      ansible.builtin.set_fact:
+        cut_chars: "{{ search_basepath | length }}"
+
+    - name: 'Find relevant JSON files'
+      ansible.builtin.find:
+        paths: "{{ search_paths }}"
+        file_type: file
+        use_regex: false
+        patterns: '*.json'
+        recurse: true
+      register: jsonfiles
+
+    - name: 'Display list of files'
+      ansible.builtin.debug:
+        msg: "{{ file.path }}"
+      loop: "{{ jsonfiles.files }}"
+      loop_control:
+        loop_var: file
+        label: "{{ file.path | ansible.builtin.basename }}"
+      tags: [never, debug]
+
+    - name: 'Initialize output list'
+      ansible.builtin.set_fact:
+        all_file_facts: []
+
+    - name: 'Read JSON files'
+      ansible.builtin.include_tasks: parse-samples-loop.yml
+      loop: "{{ jsonfiles.files }}"
+      loop_control:
+        loop_var: file
+        label: "{{ file.path | ansible.builtin.basename }}"
+
+    - name: 'Save summary to file'
+      ansible.builtin.copy:
+        content: "{{ all_file_facts | ansible.builtin.to_nice_json }}"
+        dest: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
+
+    - name: 'Show facts for all sample files'
+      ansible.builtin.debug:
+        msg: "{{ all_file_facts | ansible.builtin.to_nice_json }}"
+      tags: [never, debug]
