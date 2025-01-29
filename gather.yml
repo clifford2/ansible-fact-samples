@@ -8,7 +8,9 @@
   become: false
   gather_facts: false
   vars:
+
     local_save_basedir: 'output'
+
   tasks:
 
     - name: 'Gather facts'
@@ -31,6 +33,6 @@
 
     - name: 'Save facts to localhost file'
       ansible.builtin.copy:
-        content: "{{ ansible_facts | to_nice_json }}"
+        content: "{{ ansible_facts | ansible.builtin.to_nice_json }}"
         dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
       delegate_to: localhost
