@@ -1,20 +1,29 @@
 # Ansible Facts - Sample Output
 
-[Ansible](https://ansible.readthedocs.io/) playbooks often need to cater for multiple different target systems. This is most easily done by using Ansible [facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html) where possible.
+[Ansible](https://ansible.readthedocs.io/) playbooks often need to cater for different target systems. This is most easily done by using Ansible [facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html) where possible.
 
-I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are. This project is an attempt to save some of those samples for easy reference.
+I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are. This project is an attempt to save some of those samples for easy reference, and share them in case anyone else might find it useful too.
 
 Please contribute samples for systems you have access to :-)
 
-## Content
+Available samples so far include:
+
+- Various Linux distributions
+- macOS
+- Windows Server 2022
+- AIX 7.1, 7.2, 7.3
+- Miktotik RouterOS
+- VyOS
+
+## Repo Content
 
 Key files include:
 
 - [`output/`](output): The output samples
-- [`gather.yml`](gather.yml): A playbook to gather facts with the `ansible.builtin.setup` module
-- [`vyos-gather.yml`](vyos-gather.yml): Gather facts in VyOS devices with `vyos.vyos.vyos_facts`
-- [`ostest.yml`](ostest.yml): Gather key OS facts, display them, and demonstrate how these can be used for conditional tasks
-- [`parse-samples.yml`](parse-samples.yml): Parse output samples for key OS information, and save results to `output/parse-samples-summary.json`
+- [`playbooks/gather.yml`](playbooks/gather.yml): A playbook to gather facts with the `ansible.builtin.setup` module
+- [`playbooks/vyos-gather.yml`](playbooks/vyos-gather.yml): A playbook to gather facts for VyOS devices with `vyos.vyos.vyos_facts`
+- [`playbooks/ostest.yml`](playbooks/ostest.yml): Gather key OS facts, display them, and demonstrate how these can be used for conditional tasks
+- [`playbooks/parse-samples.yml`](playbooks/parse-samples.yml): Parse output samples for key OS information, and save results to `output/parse-samples-summary.json`
 - [`molecule/`](molecule): Scenarios for gathering Linux data from within containers (with Podman) and VMs (with KubeVirt)
 
 ## Notes On Specific Targets

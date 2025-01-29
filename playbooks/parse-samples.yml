@@ -12,22 +12,21 @@
   gather_facts: false
   vars_files:
 
-    - vars/common.yml
+    - ../vars/common.yml
 
   vars:
 
-    search_basepath: "{{ playbook_dir }}/{{ local_save_basedir }}/"
     search_paths:
-      - "{{ search_basepath }}linux"
-      - "{{ search_basepath }}darwin"
-      - "{{ search_basepath }}aix"
-      - "{{ search_basepath }}win32nt"
+      - "{{ (local_save_basedir, 'linux') | ansible.builtin.path_join }}"
+      - "{{ (local_save_basedir, 'darwin') | ansible.builtin.path_join }}"
+      - "{{ (local_save_basedir, 'aix') | ansible.builtin.path_join }}"
+      - "{{ (local_save_basedir, 'win32nt') | ansible.builtin.path_join }}"
 
   tasks:
 
     - name: 'Count how many characters to cut from start of file names'
       ansible.builtin.set_fact:
-        cut_chars: "{{ search_basepath | length }}"
+        cut_chars: "{{ local_save_basedir | length + 1 }}"
 
     - name: 'Find relevant JSON files'
       ansible.builtin.find:
@@ -60,10 +59,10 @@
 
     - name: 'Save summary to file'
       ansible.builtin.copy:
-        content: "{{ all_file_facts | ansible.builtin.to_nice_json }}"
+        content: "{{ all_file_facts | to_nice_json }}"
         dest: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
 
     - name: 'Show facts for all sample files'
       ansible.builtin.debug:
-        msg: "{{ all_file_facts | ansible.builtin.to_nice_json }}"
+        msg: "{{ all_file_facts | to_nice_json }}"
       tags: [never, debug]

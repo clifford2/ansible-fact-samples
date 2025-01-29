@@ -41,4 +41,4 @@
 
 - name: 'Show combined facts'
   ansible.builtin.debug:
-    msg: "{{ my_facts | ansible.builtin.to_nice_json }}"
+    msg: "{{ my_facts }}"

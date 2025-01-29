@@ -4,7 +4,8 @@
 
 # Common variables, used by multiple paybooks
 ---
-local_save_basedir: 'output'
+local_save_subdir: 'output'
+local_save_basedir: "{{ (playbook_dir, '..', local_save_subdir) | ansible.builtin.path_join | ansible.builtin.normpath }}"
 facts_to_display:
   - system
   - os_family
