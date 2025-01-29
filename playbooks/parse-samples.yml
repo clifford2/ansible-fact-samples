@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT-0
 
 # Parse JSON sample output files for key OS information
-# Save results to a JSON file
+# Save results to a JSON file (output/parse-samples-summary.json)
 ---
 - name: 'Parse sample JSON files'
   hosts: localhost
@@ -21,6 +21,7 @@
       - "{{ (local_save_basedir, 'darwin') | ansible.builtin.path_join }}"
       - "{{ (local_save_basedir, 'aix') | ansible.builtin.path_join }}"
       - "{{ (local_save_basedir, 'win32nt') | ansible.builtin.path_join }}"
+    summary_json_path: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
 
   tasks:
 
@@ -60,7 +61,7 @@
     - name: 'Save summary to file'
       ansible.builtin.copy:
         content: "{{ all_file_facts | to_nice_json }}"
-        dest: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
+        dest: "{{ summary_json_path }}"
 
     - name: 'Show facts for all sample files'
       ansible.builtin.debug:
