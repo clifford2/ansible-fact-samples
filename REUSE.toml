@@ -1,0 +1,7 @@
+version = 1
+
+[[annotations]]
+path = ["README.md", "output/**", "inventory/*", ".gitignore", "molecule/README.md", "molecule/shared/kubevirt-requirements.txt", "vyos-requirements.txt"]
+precedence = "closest"
+SPDX-FileCopyrightText = "© 2025 Clifford Weinmann"
+SPDX-License-Identifier = "MIT-0"

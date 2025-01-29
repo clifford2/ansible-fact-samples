@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: © 2025 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
 ---
 - name: Destroy
   hosts: localhost

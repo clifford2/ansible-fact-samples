@@ -1,10 +1,10 @@
-# Ansible Facts - Example Output
+# Ansible Facts - Sample Output
 
 [Ansible](https://ansible.readthedocs.io/) playbooks often need to cater for multiple different target systems. This is most easily done by using Ansible [facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html) where possible.
 
-I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are. This project is an attempt to save some of those examples for easy reference.
+I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are. This project is an attempt to save some of those samples for easy reference.
 
-Please contribute examples for systems you have access to :-)
+Please contribute samples for systems you have access to :-)
 
 ## Content
 
@@ -15,7 +15,7 @@ Please contribute examples for systems you have access to :-)
 - [`vyos-requirements.txt`](vyos-requirements.txt): Python requirements for `vyos-gather.yml`
 - [`vyos-requirements.yml`](vyos-requirements.yml): Galaxy requirements for `vyos-gather.yml`
 
-## Notes On Specific Samples
+## Notes On Specific Targets
 
 ### Linux
 
