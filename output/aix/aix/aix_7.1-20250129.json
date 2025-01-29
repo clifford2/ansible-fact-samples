@@ -1,0 +1,1262 @@
+{
+    "all_ipv4_addresses": [
+        "192.168.131.202"
+    ],
+    "all_ipv6_addresses": [
+        "fe80::d00c:70ff:fe67:81a7"
+    ],
+    "ansible_local": {},
+    "apparmor": {
+        "status": "disabled"
+    },
+    "architecture": "chrp",
+    "date_time": {
+        "date": "2025-01-28",
+        "day": "28",
+        "epoch": "1738129958",
+        "epoch_int": "1738129958",
+        "hour": "23",
+        "iso8601": "2025-01-29T05:52:38Z",
+        "iso8601_basic": "20250128T235238340587",
+        "iso8601_basic_short": "20250128T235238",
+        "iso8601_micro": "2025-01-29T05:52:38.340587Z",
+        "minute": "52",
+        "month": "01",
+        "second": "38",
+        "time": "23:52:38",
+        "tz": "CST",
+        "tz_dst": "CDT",
+        "tz_offset": "CST",
+        "weekday": "Tuesday",
+        "weekday_number": "2",
+        "weeknumber": "04",
+        "year": "2025"
+    },
+    "default_ipv4": {
+        "address": "192.168.131.202",
+        "broadcast": "192.168.131.207",
+        "device": "en0",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "NOTRAILERS",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST",
+            "GROUPRT",
+            "64BIT",
+            "CHECKSUM_OFFLOAD(ACTIVE)",
+            "CHAIN"
+        ],
+        "gateway": "192.168.131.201",
+        "interface": "en0",
+        "macaddress": "fa:2b:7f:e2:27:20",
+        "mtu": "9000",
+        "netmask": "255.255.255.248",
+        "network": "192.168.131.200",
+        "type": "ether"
+    },
+    "default_ipv6": {},
+    "devices": {
+        "L2cache0": {
+            "attributes": {
+                "size": "0"
+            },
+            "state": "Available",
+            "type": "L2 Cache"
+        },
+        "cache0": {
+            "attributes": {
+                "auto_grab_ssd": "no",
+                "cache_enable": "1",
+                "cache_engine": "cengine0",
+                "cfg_persist": "1"
+            },
+            "state": "Available",
+            "type": "SSD Cache virtual device"
+        },
+        "cd0": {
+            "attributes": {
+                "prevent_eject": "yes"
+            },
+            "state": "Available",
+            "type": "Virtual SCSI Optical Served by VIO Server"
+        },
+        "cengine0": {
+            "attributes": {
+                "cache_per_tgt": "1",
+                "cepath": "/usr/ccs/lib/libcehandler.a",
+                "max_partition": "1",
+                "max_pool": "1",
+                "tgt_per_cache": "unlimited"
+            },
+            "state": "Available",
+            "type": "SSD Cache engine"
+        },
+        "cluster0": {
+            "attributes": {
+                "clrpvid": "00000000000000000000000000000000",
+                "clvdisk": "00000000-0000-0000-0000-000000000000",
+                "configure": "yes",
+                "node_uuid": "f9ac1db6-ddfc-11ef-8003-d20c706781a7"
+            },
+            "state": "Available",
+            "type": "Cluster Node"
+        },
+        "en0": {
+            "attributes": {
+                "alias4": "IPv4",
+                "alias6": "IPv6",
+                "arp": "on",
+                "authority": "Authorized",
+                "broadcast": "Broadcast",
+                "monitor": "off",
+                "mtu": "9000",
+                "mtu_bypass": "off",
+                "netaddr": "192.168.131.202",
+                "netaddr6": "IPv6",
+                "netmask": "255.255.255.248",
+                "prefixlen": "Prefix",
+                "remmtu": "576",
+                "rfc1323": "Enable/Disable",
+                "security": "none",
+                "state": "up",
+                "tcp_mssdflt": "Set",
+                "tcp_nodelay": "Enable/Disable",
+                "tcp_recvspace": "Set",
+                "tcp_sendspace": "Set",
+                "thread": "off"
+            },
+            "state": "Available",
+            "type": "Standard Ethernet Network Interface"
+        },
+        "en1": {
+            "attributes": {
+                "alias4": "IPv4",
+                "alias6": "IPv6",
+                "arp": "on",
+                "authority": "Authorized",
+                "broadcast": "Broadcast",
+                "monitor": "off",
+                "mtu": "1500",
+                "mtu_bypass": "off",
+                "netaddr": "Internet",
+                "netaddr6": "fe80::d00c:70ff:fe67:81a7",
+                "netmask": "Subnet",
+                "prefixlen": "64",
+                "remmtu": "576",
+                "rfc1323": "Enable/Disable",
+                "security": "none",
+                "state": "up",
+                "tcp_mssdflt": "Set",
+                "tcp_nodelay": "Enable/Disable",
+                "tcp_recvspace": "Set",
+                "tcp_sendspace": "Set",
+                "thread": "off"
+            },
+            "state": "Available",
+            "type": "Standard Ethernet Network Interface"
+        },
+        "ent0": {
+            "attributes": {
+                "alt_addr": "0x000000000000",
+                "buf_mode": "min",
+                "chksum_offload": "yes",
+                "copy_buffs": "32",
+                "copy_bytes": "65536",
+                "desired_mapmem": "0",
+                "ipv6_offload": "no",
+                "max_buf_control": "64",
+                "max_buf_huge": "64",
+                "max_buf_large": "64",
+                "max_buf_medium": "256",
+                "max_buf_small": "2048",
+                "max_buf_tiny": "2048",
+                "min_buf_control": "24",
+                "min_buf_huge": "24",
+                "min_buf_large": "24",
+                "min_buf_medium": "128",
+                "min_buf_small": "512",
+                "min_buf_tiny": "512",
+                "platform_lso": "yes",
+                "poll_uplink": "no",
+                "poll_uplink_int": "1000",
+                "trace_debug": "no",
+                "use_alt_addr": "no"
+            },
+            "state": "Available",
+            "type": "Virtual I/O Ethernet Adapter (l-lan)"
+        },
+        "ent1": {
+            "attributes": {
+                "alt_addr": "0x000000000000",
+                "buf_mode": "min",
+                "chksum_offload": "yes",
+                "copy_buffs": "32",
+                "copy_bytes": "65536",
+                "desired_mapmem": "0",
+                "ipv6_offload": "no",
+                "max_buf_control": "64",
+                "max_buf_huge": "64",
+                "max_buf_large": "64",
+                "max_buf_medium": "256",
+                "max_buf_small": "2048",
+                "max_buf_tiny": "2048",
+                "min_buf_control": "24",
+                "min_buf_huge": "24",
+                "min_buf_large": "24",
+                "min_buf_medium": "128",
+                "min_buf_small": "512",
+                "min_buf_tiny": "512",
+                "platform_lso": "yes",
+                "poll_uplink": "no",
+                "poll_uplink_int": "1000",
+                "trace_debug": "no",
+                "use_alt_addr": "no"
+            },
+            "state": "Available",
+            "type": "Virtual I/O Ethernet Adapter (l-lan)"
+        },
+        "et0": {
+            "attributes": {
+                "alias4": "IPv4",
+                "alias6": "IPv6",
+                "arp": "on",
+                "authority": "Authorized",
+                "broadcast": "Broadcast",
+                "mtu": "1492",
+                "netaddr": "Internet",
+                "netaddr6": "IPv6",
+                "netmask": "Subnet",
+                "prefixlen": "Prefix",
+                "remmtu": "576",
+                "rfc1323": "Enable/Disable",
+                "security": "none",
+                "state": "down",
+                "tcp_mssdflt": "Set",
+                "tcp_nodelay": "Enable/Disable",
+                "tcp_recvspace": "Set",
+                "tcp_sendspace": "Set"
+            },
+            "state": "Defined",
+            "type": "IEEE 802.3 Ethernet Network Interface"
+        },
+        "et1": {
+            "attributes": {
+                "alias4": "IPv4",
+                "alias6": "IPv6",
+                "arp": "on",
+                "authority": "Authorized",
+                "broadcast": "Broadcast",
+                "mtu": "1492",
+                "netaddr": "Internet",
+                "netaddr6": "IPv6",
+                "netmask": "Subnet",
+                "prefixlen": "Prefix",
+                "remmtu": "576",
+                "rfc1323": "Enable/Disable",
+                "security": "none",
+                "state": "down",
+                "tcp_mssdflt": "Set",
+                "tcp_nodelay": "Enable/Disable",
+                "tcp_recvspace": "Set",
+                "tcp_sendspace": "Set"
+            },
+            "state": "Defined",
+            "type": "IEEE 802.3 Ethernet Network Interface"
+        },
+        "fcs0": {
+            "attributes": {
+                "intr_priority": "3",
+                "lg_term_dma": "0x800000",
+                "max_xfer_size": "0x100000",
+                "num_cmd_elems": "200",
+                "sw_fc_class": "2"
+            },
+            "state": "Available",
+            "type": "C4-T1 Virtual Fibre Channel Client Adapter"
+        },
+        "fcs1": {
+            "attributes": {
+                "intr_priority": "3",
+                "lg_term_dma": "0x800000",
+                "max_xfer_size": "0x100000",
+                "num_cmd_elems": "200",
+                "sw_fc_class": "2"
+            },
+            "state": "Available",
+            "type": "C6-T1 Virtual Fibre Channel Client Adapter"
+        },
+        "fcs2": {
+            "attributes": {
+                "intr_priority": "3",
+                "lg_term_dma": "0x800000",
+                "max_xfer_size": "0x100000",
+                "num_cmd_elems": "200",
+                "sw_fc_class": "2"
+            },
+            "state": "Available",
+            "type": "C7-T1 Virtual Fibre Channel Client Adapter"
+        },
+        "fcs3": {
+            "attributes": {
+                "intr_priority": "3",
+                "lg_term_dma": "0x800000",
+                "max_xfer_size": "0x100000",
+                "num_cmd_elems": "200",
+                "sw_fc_class": "2"
+            },
+            "state": "Available",
+            "type": "C8-T1 Virtual Fibre Channel Client Adapter"
+        },
+        "fscsi0": {
+            "attributes": {
+                "attach": "switch",
+                "dyntrk": "yes",
+                "fc_err_recov": "fast_fail",
+                "scsi_id": "0x72209",
+                "sw_fc_class": "3"
+            },
+            "state": "Available",
+            "type": "C4-T1-01 FC SCSI I/O Controller Protocol Device"
+        },
+        "fscsi1": {
+            "attributes": {
+                "attach": "switch",
+                "dyntrk": "yes",
+                "fc_err_recov": "fast_fail",
+                "scsi_id": "0x82643",
+                "sw_fc_class": "3"
+            },
+            "state": "Available",
+            "type": "C6-T1-01 FC SCSI I/O Controller Protocol Device"
+        },
+        "fscsi2": {
+            "attributes": {
+                "attach": "switch",
+                "dyntrk": "yes",
+                "fc_err_recov": "fast_fail",
+                "scsi_id": "0x72002",
+                "sw_fc_class": "3"
+            },
+            "state": "Available",
+            "type": "C7-T1-01 FC SCSI I/O Controller Protocol Device"
+        },
+        "fscsi3": {
+            "attributes": {
+                "attach": "switch",
+                "dyntrk": "yes",
+                "fc_err_recov": "fast_fail",
+                "scsi_id": "0x8206f",
+                "sw_fc_class": "3"
+            },
+            "state": "Available",
+            "type": "C8-T1-01 FC SCSI I/O Controller Protocol Device"
+        },
+        "hd1": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/home",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.8",
+                "relocatable": "y",
+                "size": "1",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd10opt": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/opt",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.9",
+                "relocatable": "y",
+                "size": "35",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd11admin": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/admin",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.10",
+                "relocatable": "y",
+                "size": "4",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd2": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/usr",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.5",
+                "relocatable": "y",
+                "size": "68",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd3": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/tmp",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.7",
+                "relocatable": "y",
+                "size": "23",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd4": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.4",
+                "relocatable": "y",
+                "size": "3",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd5": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "e",
+                "label": "primary_bootlv",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.1",
+                "relocatable": "n",
+                "size": "1",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "boot",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd6": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "m",
+                "label": "None",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.2",
+                "relocatable": "y",
+                "size": "16",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "paging",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd8": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "None",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.3",
+                "relocatable": "y",
+                "size": "1",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2log",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hd9var": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "c",
+                "label": "/var",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.6",
+                "relocatable": "y",
+                "size": "22",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "hdisk0": {
+            "attributes": {
+                "PCM": "PCM/friend/fcpother",
+                "PR_key_value": "none",
+                "algorithm": "fail_over",
+                "clr_q": "no",
+                "dist_err_pcnt": "0",
+                "dist_tw_width": "50",
+                "hcheck_cmd": "test_unit_rdy",
+                "hcheck_interval": "60",
+                "hcheck_mode": "nonactive",
+                "location": "Location",
+                "lun_id": "0x0",
+                "lun_reset_spt": "yes",
+                "max_coalesce": "0x40000",
+                "max_retry_delay": "60",
+                "max_transfer": "0x80000",
+                "node_name": "0x5005076813004834",
+                "pvid": "00fa00d6b552f41b0000000000000000",
+                "q_err": "yes",
+                "q_type": "simple",
+                "queue_depth": "20",
+                "reassign_to": "120",
+                "reserve_policy": "single_path",
+                "rw_timeout": "30",
+                "scsi_id": "0x16a00",
+                "start_timeout": "60",
+                "timeout_policy": "fail_path",
+                "unique_id": "332136005076813810241A80000000000620804214503IBMfcp",
+                "ww_name": "0x5005076813134834"
+            },
+            "state": "Available",
+            "type": "C4-T1-01 MPIO IBM 2076 FC Disk"
+        },
+        "inet0": {
+            "attributes": {
+                "authm": "65536",
+                "bootup_option": "no",
+                "gateway": "Gateway",
+                "hostname": "fact71",
+                "rout6": "IPv6",
+                "route": "net,-hopcount,0,,0,192.168.131.201"
+            },
+            "state": "Available",
+            "type": "Internet Network Extension"
+        },
+        "iocp0": {
+            "attributes": {
+                "autoconfig": "defined"
+            },
+            "state": "Defined",
+            "type": "I/O Completion Ports"
+        },
+        "iscsi0": {
+            "attributes": {
+                "disc_filename": "/etc/iscsi/targets",
+                "disc_policy": "file",
+                "initiator_name": "iqn.localhost.hostid.7f000001",
+                "isns_srvnames": "auto",
+                "isns_srvports": "iSNS",
+                "max_targets": "16",
+                "num_cmd_elems": "200"
+            },
+            "state": "Available",
+            "type": "iSCSI Protocol Device"
+        },
+        "lg_dumplv": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "m",
+                "label": "None",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.11",
+                "relocatable": "y",
+                "size": "32",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "sysdump",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "livedump": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "m",
+                "label": "/var/adm/ras/livedump",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.12",
+                "relocatable": "y",
+                "size": "8",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "lo0": {
+            "attributes": {
+                "mtu": "16896",
+                "netaddr": "127.0.0.1",
+                "netaddr6": "::1",
+                "netmask": "Subnet",
+                "prefixlen": "IPv6",
+                "rfc1323": "Enable/Disable",
+                "state": "up",
+                "tcp_mssdflt": "Set",
+                "tcp_nodelay": "Enable/Disable",
+                "tcp_recvspace": "Set",
+                "tcp_sendspace": "Set"
+            },
+            "state": "Available",
+            "type": "Loopback Network Interface"
+        },
+        "lvdd": {
+            "attributes": {},
+            "state": "Available",
+            "type": "LVM Device Driver"
+        },
+        "mem0": {
+            "attributes": {
+                "ent_mem_cap": "I/O",
+                "goodsize": "2048",
+                "mem_exp_factor": "Memory",
+                "size": "2048",
+                "var_mem_weight": "Variable"
+            },
+            "state": "Available",
+            "type": "Memory"
+        },
+        "pkcs11": {
+            "attributes": {
+                "comp_trace": "no",
+                "io_threads": "8",
+                "proc_heap_sz": "8",
+                "trc_adm": "no",
+                "trc_clic": "no",
+                "trc_context": "no",
+                "trc_dd": "no",
+                "trc_hw": "no",
+                "trc_io": "no",
+                "trc_k_klib": "no",
+                "trc_k_ulib": "no",
+                "trc_malloc": "no",
+                "trc_meta": "no",
+                "trc_mmap": "no",
+                "trc_obj": "no",
+                "trc_req": "no",
+                "trc_sess": "no",
+                "trc_slot": "no",
+                "trc_token": "no",
+                "trc_u_lib": "no",
+                "trc_util": "no",
+                "y4_max_req": "16"
+            },
+            "state": "Available",
+            "type": "ACF/PKCS#11 Device"
+        },
+        "proc0": {
+            "attributes": {
+                "frequency": "3150000000",
+                "smt_enabled": "true",
+                "smt_threads": "8",
+                "state": "enable",
+                "type": "PowerPC_POWER9"
+            },
+            "state": "Available",
+            "type": "00-00 Processor"
+        },
+        "pty0": {
+            "attributes": {
+                "ATTnum": "256",
+                "BSDnum": "16",
+                "autoconfig": "available",
+                "csmap": "sbcs"
+            },
+            "state": "Available",
+            "type": "Asynchronous Pseudo-Terminal"
+        },
+        "rcm0": {
+            "attributes": {},
+            "state": "Defined",
+            "type": "Rendering Context Manager Subsystem"
+        },
+        "repo00": {
+            "attributes": {
+                "copies": "1",
+                "inter": "m",
+                "intra": "m",
+                "label": "/usr/sys/inst.images",
+                "lvserial_id": "00fa00d600004c000000017d0d5e637f.13",
+                "relocatable": "y",
+                "size": "269",
+                "strictness": "y",
+                "stripe_size": "Stripe",
+                "stripe_width": "Striping",
+                "type": "jfs2",
+                "upperbound": "32"
+            },
+            "state": "Defined",
+            "type": "Logical volume"
+        },
+        "rootvg": {
+            "attributes": {
+                "auto_on": "y",
+                "cache_pbuf_cnt": "0",
+                "conc_auto_on": "n",
+                "conc_capable": "n",
+                "gbl_pbufs_ppv": "0",
+                "gbl_pbufs_pvg": "0",
+                "timestamp": "6799bcdb04e929ec",
+                "vg_pbufs_ppv": "0",
+                "vgserial_id": "00fa00d600004c000000017d0d5e637f",
+                "workQ_size": "256"
+            },
+            "state": "Defined",
+            "type": "Volume group"
+        },
+        "sfw0": {
+            "attributes": {
+                "enable_sas": "no",
+                "vltag": "3358"
+            },
+            "state": "Available",
+            "type": "Storage Framework Module"
+        },
+        "sfwcomm0": {
+            "attributes": {},
+            "state": "Available",
+            "type": "C4-T1-01-FF Fibre Channel Storage Framework Comm"
+        },
+        "sfwcomm1": {
+            "attributes": {},
+            "state": "Available",
+            "type": "C6-T1-01-FF Fibre Channel Storage Framework Comm"
+        },
+        "sfwcomm2": {
+            "attributes": {},
+            "state": "Available",
+            "type": "C7-T1-01-FF Fibre Channel Storage Framework Comm"
+        },
+        "sfwcomm3": {
+            "attributes": {},
+            "state": "Available",
+            "type": "C8-T1-01-FF Fibre Channel Storage Framework Comm"
+        },
+        "sys0": {
+            "attributes": {
+                "SW_dist_intr": "false",
+                "autorestart": "true",
+                "boottype": "disk",
+                "capacity_inc": "0.01",
+                "capped": "false",
+                "chown_restrict": "true",
+                "clouddev": "1",
+                "conslogin": "enable",
+                "cpuguard": "enable",
+                "dedicated": "false",
+                "enhanced_RBAC": "true",
+                "ent_capacity": "0.25",
+                "frequency": "1600000000",
+                "fullcore": "false",
+                "fwversion": "IBM,FW950.C1",
+                "ghostdev": "0",
+                "id_to_partition": "0X800013966CF00018",
+                "id_to_system": "0X800013966CF00000",
+                "iostat": "false",
+                "keylock": "normal",
+                "log_pg_dealloc": "true",
+                "max_capacity": "2.00",
+                "max_logname": "9",
+                "maxbuf": "20",
+                "maxmbuf": "0",
+                "maxpout": "8193",
+                "maxuproc": "128",
+                "min_capacity": "0.25",
+                "minpout": "4096",
+                "modelname": "IBM,9080-M9S",
+                "ncargs": "256",
+                "nfs4_acl_compat": "secure",
+                "ngroups_allowed": "128",
+                "os_uuid": "3661c45d-10f5-4ccd-93a6-b4eb304facac",
+                "pmuaccess": "all",
+                "pre430core": "false",
+                "pre520tune": "disable",
+                "realmem": "2097152",
+                "rtasversion": "1",
+                "sed_config": "select",
+                "systemid": "IBM,0221C8827",
+                "variable_weight": "128"
+            },
+            "state": "Available",
+            "type": "System Object"
+        },
+        "sysplanar0": {
+            "attributes": {},
+            "state": "Available",
+            "type": "System Planar"
+        },
+        "vio0": {
+            "attributes": {
+                "bus_id": "0x90000340"
+            },
+            "state": "Available",
+            "type": "Virtual I/O Bus"
+        },
+        "vsa0": {
+            "attributes": {
+                "desired_mapmem": "I/O"
+            },
+            "state": "Available",
+            "type": "LPAR Virtual Serial Adapter"
+        },
+        "vscsi0": {
+            "attributes": {
+                "rw_timeout": "45",
+                "vscsi_err_recov": "delayed_fail",
+                "vscsi_path_to": "0"
+            },
+            "state": "Available",
+            "type": "Virtual SCSI Client Adapter"
+        },
+        "vty0": {
+            "attributes": {
+                "autoconfig": "available",
+                "bpc": "8",
+                "csmap": "sbcs",
+                "discard": "^o",
+                "dsusp": "^y",
+                "eof": "^d",
+                "eol": "^@",
+                "eol2": "^?",
+                "erase": "^h",
+                "flow_disp": "xon",
+                "imap": "none",
+                "intr": "^c",
+                "kill": "^u",
+                "lnext": "^v",
+                "logger": "LOGGER",
+                "login": "disable",
+                "logmodes": "hupcl,cread,echoe,cs8",
+                "modules": "ldterm",
+                "omap": "none",
+                "open_disp": "dtropen",
+                "parity": "none",
+                "quit": "^\\",
+                "reprint": "^r",
+                "runmodes": "hupcl,cread,brkint,icrnl,opost,tab3,onlcr,isig,icanon,echo,echoe,echok,echoctl,echoke,imaxbel,iexten",
+                "speed": "19200",
+                "start": "^q",
+                "stop": "^s",
+                "stops": "1",
+                "susp": "^z",
+                "term": "vt220",
+                "timeout": "0",
+                "werase": "^w"
+            },
+            "state": "Available",
+            "type": "Asynchronous Terminal"
+        }
+    },
+    "distribution": "AIX",
+    "distribution_major_version": "7",
+    "distribution_release": "1",
+    "distribution_version": "7.1",
+    "dns": {
+        "nameservers": [
+            "9.9.9.9"
+        ]
+    },
+    "domain": "",
+    "effective_group_id": 0,
+    "effective_user_id": 0,
+    "en0": {
+        "device": "en0",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "NOTRAILERS",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST",
+            "GROUPRT",
+            "64BIT",
+            "CHECKSUM_OFFLOAD(ACTIVE)",
+            "CHAIN"
+        ],
+        "ipv4": [
+            {
+                "address": "192.168.131.202",
+                "broadcast": "192.168.131.207",
+                "netmask": "255.255.255.248",
+                "network": "192.168.131.200"
+            }
+        ],
+        "ipv6": [],
+        "macaddress": "fa:2b:7f:e2:27:20",
+        "mtu": "9000",
+        "type": "ether"
+    },
+    "en1": {
+        "device": "en1",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "NOTRAILERS",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST",
+            "GROUPRT",
+            "64BIT",
+            "CHECKSUM_OFFLOAD(ACTIVE)",
+            "CHAIN"
+        ],
+        "ipv4": [],
+        "ipv6": [
+            {
+                "address": "fe80::d00c:70ff:fe67:81a7",
+                "prefix": "64"
+            }
+        ],
+        "macaddress": "d2:0c:70:67:81:a7",
+        "mtu": "1500",
+        "type": "ether"
+    },
+    "env": {
+        "AUTHSTATE": "compat",
+        "CLCMD_PASSTHRU": "1",
+        "HOME": "/",
+        "LANG": "en_US",
+        "LC__FASTMSG": "true",
+        "LOCPATH": "/usr/lib/nls/loc",
+        "LOGIN": "root",
+        "LOGNAME": "root",
+        "MAIL": "/var/spool/mail/root",
+        "NLSPATH": "/usr/lib/nls/msg/%L/%N:/usr/lib/nls/msg/%L/%N.cat:/usr/lib/nls/msg/%l.%c/%N:/usr/lib/nls/msg/%l.%c/%N.cat",
+        "ODMDIR": "/etc/objrepos",
+        "PATH": "/usr/bin:/etc:/usr/sbin:/usr/ucb:/usr/bin/X11:/sbin:/usr/java8_64/jre/bin:/usr/java8_64/bin",
+        "PWD": "/",
+        "SHELL": "/usr/bin/ksh",
+        "SSH_CLIENT": "197.225.96.91 46316 22",
+        "SSH_CONNECTION": "197.225.96.91 46316 192.168.131.202 22",
+        "SSH_TTY": "/dev/pts/1",
+        "TERM": "xterm-256color",
+        "TZ": "CST6CDT",
+        "USER": "root",
+        "_": "/opt/freeware/bin/python3.11"
+    },
+    "fibre_channel_wwn": [
+        "C050760C7592981A",
+        "C050760C7592981C",
+        "C050760C75929818",
+        "C050760C7592981E"
+    ],
+    "fips": false,
+    "firmware_version": "FW950.C1",
+    "fqdn": "fact71",
+    "gather_subset": [
+        "all"
+    ],
+    "hostname": "fact71",
+    "hostnqn": "",
+    "interfaces": [
+        "en0",
+        "en1",
+        "sit0"
+    ],
+    "is_chroot": false,
+    "iscsi_iqn": "iqn.localhost.hostid.7f000001",
+    "kernel": "1",
+    "kernel_version": "7",
+    "lpar_info": "24 fact71-8ac49a48-0001fbc9",
+    "lsb": {},
+    "machine": "00CC88274C00",
+    "memfree_mb": 15,
+    "memtotal_mb": 2048,
+    "module_setup": true,
+    "mounts": [
+        {
+            "block_available": 14973,
+            "block_size": 4096,
+            "block_total": 24576,
+            "block_used": 9603,
+            "device": "/dev/hd4",
+            "fstype": "jfs2",
+            "inode_available": 13724,
+            "inode_total": 16221,
+            "inode_used": 2497,
+            "mount": "/",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 61329408,
+            "size_total": 100663296,
+            "time": "Jan 28 22:50"
+        },
+        {
+            "block_available": 51421,
+            "block_size": 4096,
+            "block_total": 557056,
+            "block_used": 505635,
+            "device": "/dev/hd2",
+            "fstype": "jfs2",
+            "inode_available": 50022,
+            "inode_total": 90187,
+            "inode_used": 40165,
+            "mount": "/usr",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 210620416,
+            "size_total": 2281701376,
+            "time": "Jan 28 22:50"
+        },
+        {
+            "block_available": 86673,
+            "block_size": 4096,
+            "block_total": 180224,
+            "block_used": 93551,
+            "device": "/dev/hd9var",
+            "fstype": "jfs2",
+            "inode_available": 77650,
+            "inode_total": 78770,
+            "inode_used": 1120,
+            "mount": "/var",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 355012608,
+            "size_total": 738197504,
+            "time": "Jan 28 22:50"
+        },
+        {
+            "block_available": 146523,
+            "block_size": 4096,
+            "block_total": 188416,
+            "block_used": 41893,
+            "device": "/dev/hd3",
+            "fstype": "jfs2",
+            "inode_available": 130929,
+            "inode_total": 131010,
+            "inode_used": 81,
+            "mount": "/tmp",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 600158208,
+            "size_total": 771751936,
+            "time": "Jan 28 22:50"
+        },
+        {
+            "block_available": 8099,
+            "block_size": 4096,
+            "block_total": 8192,
+            "block_used": 93,
+            "device": "/dev/hd1",
+            "fstype": "jfs2",
+            "inode_available": 7288,
+            "inode_total": 7295,
+            "inode_used": 7,
+            "mount": "/home",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 33173504,
+            "size_total": 33554432,
+            "time": "Jan 28 22:51"
+        },
+        {
+            "block_available": 32673,
+            "block_size": 4096,
+            "block_total": 32768,
+            "block_used": 95,
+            "device": "/dev/hd11admin",
+            "fstype": "jfs2",
+            "inode_available": 29133,
+            "inode_total": 29138,
+            "inode_used": 5,
+            "mount": "/admin",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 133828608,
+            "size_total": 134217728,
+            "time": "Jan 28 22:51"
+        },
+        {
+            "block_available": 0,
+            "block_size": 1024,
+            "block_total": -1,
+            "block_used": -1,
+            "device": "/proc",
+            "fstype": "procfs",
+            "inode_available": 0,
+            "inode_total": 0,
+            "inode_used": 0,
+            "mount": "/proc",
+            "options": "rw",
+            "size_available": 0,
+            "size_total": -1024,
+            "time": "Jan 28 22:51"
+        },
+        {
+            "block_available": 28304,
+            "block_size": 4096,
+            "block_total": 286720,
+            "block_used": 258416,
+            "device": "/dev/hd10opt",
+            "fstype": "jfs2",
+            "inode_available": 27642,
+            "inode_total": 49991,
+            "inode_used": 22349,
+            "mount": "/opt",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 115933184,
+            "size_total": 1174405120,
+            "time": "Jan 28 22:51"
+        },
+        {
+            "block_available": 65444,
+            "block_size": 4096,
+            "block_total": 65536,
+            "block_used": 92,
+            "device": "/dev/livedump",
+            "fstype": "jfs2",
+            "inode_available": 58200,
+            "inode_total": 58204,
+            "inode_used": 4,
+            "mount": "/var/adm/ras/livedump",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 268058624,
+            "size_total": 268435456,
+            "time": "Jan 28 22:51"
+        },
+        {
+            "block_available": 22483,
+            "block_size": 4096,
+            "block_total": 2203648,
+            "block_used": 2181165,
+            "device": "/dev/repo00",
+            "fstype": "jfs2",
+            "inode_available": 20396,
+            "inode_total": 22608,
+            "inode_used": 2212,
+            "mount": "/usr/sys/inst.images",
+            "options": "rw,log=/dev/hd8",
+            "size_available": 92090368,
+            "size_total": 9026142208,
+            "time": "Jan 28 22:51"
+        }
+    ],
+    "nodename": "fact71",
+    "os_family": "AIX",
+    "pkg_mgr": "dnf",
+    "processor": [
+        "PowerPC_POWER9"
+    ],
+    "processor_cores": 1,
+    "processor_count": 1,
+    "processor_threads_per_core": 8,
+    "processor_vcpus": 8,
+    "product_name": "IBM,9080-M9S",
+    "product_serial": "21C8827",
+    "python": {
+        "executable": "/opt/freeware/bin/python3.11",
+        "has_sslcontext": true,
+        "type": "cpython",
+        "version": {
+            "major": 3,
+            "micro": 9,
+            "minor": 11,
+            "releaselevel": "final",
+            "serial": 0
+        },
+        "version_info": [
+            3,
+            11,
+            9,
+            "final",
+            0
+        ]
+    },
+    "python_version": "3.11.9",
+    "real_group_id": 0,
+    "real_user_id": 0,
+    "selinux": {
+        "status": "Missing selinux Python library"
+    },
+    "selinux_python_present": false,
+    "service_mgr": "src",
+    "sit0": {
+        "device": "sit0",
+        "flags": [
+            "UP",
+            "RUNNING",
+            "LINK0"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "unknown",
+        "type": "unknown"
+    },
+    "ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBAPkSr+ZjIjS6CIbpGFF1qucoDNKZmy4Ue9rZm93k2iS58QC6RDZnefoyfPxALnCXeP+9I9juwX4+FfO3DjLySk9/xHujfl+jPMHpG27vN1qN8AHFgGyAkkQEmrVEdKlx6ly/NLAhJBx9RIbpwMJtnYXePXEKOL2G1VfuzM/ekCU3AAAAFQDsrdJQhyPUpGNpr7ZSoJS+LsOIeQAAAIBL6wbJfKWtpU/1xoq+XBR6U9adsyaCjlVQVgl8/xefeADRNqmmWTU91/e3/owfRegAt1QStxwX/dnIdTvrUbJGGefYYJihLHUGo8gkd06pPJkpwIq4fErh1vKH9R4QdMC00sbI1kGcCLsWrocFpa0x+SukLzfGjZT0DVbRonpkvAAAAIBqArUFxmyOElzab/q+tDHupl/sqgOJiRui8rrumH1CmKrXcGQkxXkgM4w7Rx4/R/ogCjThE3SkwnS8igGavtv6DiSNmWv2coujSmyRqDqYeICdFkk1/PMJ0W6yY9Tsy+aNC34fsZxyxjRkr2HizvIz5UJRjkgvhLtXUTET9e+vsA==",
+    "ssh_host_key_dsa_public_keytype": "ssh-dss",
+    "ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDWb3VfGtYhY5VlyNGG7T2ccKaI0bCa8tEg/Gk1TwH3tlgAvdSyp5/dt893kPmEZpZWQ2JtoQP9nXUKaIKX0tRxTptfwAIFZFMDoidEWfjIxggQc5JSSnScxZL/0rNqhUg48Fkif83u2TymjsCkblquZ4Q5lESmHm2uR0c6EiF/5ToYFVTnURZDVZx0wRESJSy/tE7v5ZlzLG4tv7toRz8DLNsr1ltFGmXU250AAvqhsAsJpzcSGSyIsU2CUiM+vCm9WHYA6HjWmGsfgaQwPL6ysV8mj8taTG4+uPqedyxExqgLXp/uLrgIqQ5XoKxpVh01yTd5G0mO/wDgqHIfxjciPXWmTCMgs6fB7ghKNIoDfzz9mDGKgdWaqq1+voC3OaHmSgC2cfUa5/OVlg0HWnvZ9xqIut5DsGEj6sJWZ+krPZNRJnS78/+M7BAuESgbjsZ+D/yqRYQJSWCRHh8ghMNW/QRqU4uDHhjOdKxkiwyN9PX7f5GW4oetuaMNgFCv6ac=",
+    "ssh_host_key_rsa_public_keytype": "ssh-rsa",
+    "swapfree_mb": 506,
+    "swaptotal_mb": 512,
+    "system": "AIX",
+    "system_capabilities": "N/A",
+    "system_capabilities_enforced": "N/A",
+    "user_dir": "/",
+    "user_gecos": "",
+    "user_gid": 0,
+    "user_id": "root",
+    "user_shell": "/usr/bin/ksh",
+    "user_uid": 0,
+    "userspace_bits": "64",
+    "vgs": {
+        "rootvg": [
+            {
+                "free_pps": "156",
+                "pp_size": "32 megabyte(s)",
+                "pv_name": "hdisk0",
+                "pv_state": "active",
+                "total_pps": "639"
+            }
+        ]
+    },
+    "virtualization_role": "",
+    "virtualization_tech_guest": [],
+    "virtualization_tech_host": [],
+    "virtualization_type": ""
+}

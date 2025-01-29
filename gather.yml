@@ -1,0 +1,32 @@
+---
+- name: 'Gather Ansible facts with ansible.builtin.setup'
+  hosts: all
+  become: false
+  gather_facts: false
+  vars:
+    local_save_basedir: 'output'
+  tasks:
+
+    - name: 'Gather facts'
+      ansible.builtin.setup:
+
+    - name: 'Construct output directory name'
+      ansible.builtin.set_fact:
+        local_save_dir: "{{ (local_save_basedir, ansible_facts['system'] | lower, ansible_facts['distribution'] | lower) | ansible.builtin.path_join }}"
+
+    - name: 'Construct output file name'
+      ansible.builtin.set_fact:
+        local_save_file: "{{ (play_hosts | ansible.utils.index_of('eq', inventory_hostname) | string) + '-' + ansible_date_time.iso8601_basic_short }}"
+
+    - name: 'Ensure local output directory exists'
+      ansible.builtin.file:
+        path: "{{ local_save_dir }}"
+        state: directory
+        mode: '0755'
+      delegate_to: localhost
+
+    - name: 'Save facts to localhost file'
+      ansible.builtin.copy:
+        content: "{{ ansible_facts | to_nice_json }}"
+        dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
+      delegate_to: localhost

@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: Copyright © 2025 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
+---
+- name: Include gather playbook
+  ansible.builtin.import_playbook: ../../gather.yml

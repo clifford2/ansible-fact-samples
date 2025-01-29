@@ -1,0 +1,15 @@
+*.swp
+*.bak
+*.log
+.vscode
+.DS_Store
+.bash_history
+.lesshst
+*/__pycache__/*
+*.retry
+.tower_cli.cfg
+.env
+.env.tiny
+.awx.env
+.tmp/
+/inventory/

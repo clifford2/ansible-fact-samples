@@ -1,0 +1,489 @@
+{
+    "all_ipv4_addresses": [
+        "172.31.3.173"
+    ],
+    "all_ipv6_addresses": [
+        "fe80::ce9:7df6:a545:88c%en4"
+    ],
+    "anpi0": {
+        "device": "anpi0",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "12:5d:a3:09:b2:8d",
+        "media": "Unknown",
+        "media_select": "none",
+        "mtu": "1500",
+        "options": [
+            "CHANNEL_IO"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "anpi1": {
+        "device": "anpi1",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "12:5d:a3:09:b2:8e",
+        "media": "Unknown",
+        "media_select": "none",
+        "mtu": "1500",
+        "options": [
+            "CHANNEL_IO"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "ansible_local": {},
+    "apparmor": {
+        "status": "disabled"
+    },
+    "architecture": "arm64",
+    "bridge0": {
+        "device": "bridge0",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "36:45:dc:f2:5f:80",
+        "media": "Unknown",
+        "media_select": "Unknown",
+        "media_type": "unknown type",
+        "mtu": "1500",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "date_time": {
+        "date": "2025-01-28",
+        "day": "28",
+        "epoch": "1738081482",
+        "epoch_int": "1738081482",
+        "hour": "16",
+        "iso8601": "2025-01-28T16:24:42Z",
+        "iso8601_basic": "20250128T162442759864",
+        "iso8601_basic_short": "20250128T162442",
+        "iso8601_micro": "2025-01-28T16:24:42.759864Z",
+        "minute": "24",
+        "month": "01",
+        "second": "42",
+        "time": "16:24:42",
+        "tz": "GMT",
+        "tz_dst": "GMT",
+        "tz_offset": "+0000",
+        "weekday": "Tuesday",
+        "weekday_number": "2",
+        "weeknumber": "04",
+        "year": "2025"
+    },
+    "default_ipv4": {
+        "address": "172.31.3.173",
+        "broadcast": "172.31.15.255",
+        "device": "en4",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "gateway": "172.31.0.1",
+        "interface": "en4",
+        "macaddress": "0a:ff:cc:3d:a7:45",
+        "media": "Unknown",
+        "media_select": "autoselect",
+        "media_type": "none",
+        "mtu": "9001",
+        "netmask": "255.255.240.0",
+        "network": "172.31.0.0",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "active",
+        "type": "ether"
+    },
+    "default_ipv6": {},
+    "discovered_interpreter_python": "/usr/bin/python3",
+    "distribution": "MacOSX",
+    "distribution_major_version": "15",
+    "distribution_release": "24.2.0",
+    "distribution_version": "15.2",
+    "dns": {
+        "nameservers": [
+            "172.31.0.2"
+        ],
+        "search": [
+            "ec2.internal"
+        ]
+    },
+    "domain": "ec2.internal",
+    "effective_group_id": 20,
+    "effective_user_id": 501,
+    "en0": {
+        "device": "en0",
+        "flags": [
+            "BROADCAST",
+            "SMART",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "14:98:77:7b:8d:fe",
+        "media": "Unknown",
+        "media_select": "autoselect",
+        "media_type": "none",
+        "mtu": "1500",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "en2": {
+        "device": "en2",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "PROMISC",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "36:45:dc:f2:5f:80",
+        "media": "Unknown",
+        "media_select": "autoselect",
+        "media_type": "full-duplex",
+        "mtu": "1500",
+        "options": [
+            "TSO4",
+            "TSO6",
+            "CHANNEL_IO"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "en3": {
+        "device": "en3",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "PROMISC",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "36:45:dc:f2:5f:84",
+        "media": "Unknown",
+        "media_select": "autoselect",
+        "media_type": "full-duplex",
+        "mtu": "1500",
+        "options": [
+            "TSO4",
+            "TSO6",
+            "CHANNEL_IO"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "en4": {
+        "device": "en4",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [
+            {
+                "address": "172.31.3.173",
+                "broadcast": "172.31.15.255",
+                "netmask": "255.255.240.0",
+                "network": "172.31.0.0"
+            }
+        ],
+        "ipv6": [
+            {
+                "address": "fe80::ce9:7df6:a545:88c%en4",
+                "prefix": "64"
+            }
+        ],
+        "macaddress": "0a:ff:cc:3d:a7:45",
+        "media": "Unknown",
+        "media_select": "autoselect",
+        "media_type": "none",
+        "mtu": "9001",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "active",
+        "type": "ether"
+    },
+    "en5": {
+        "device": "en5",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "12:5d:a3:09:b2:6d",
+        "media": "Unknown",
+        "media_select": "none",
+        "mtu": "1500",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "en6": {
+        "device": "en6",
+        "flags": [
+            "UP",
+            "BROADCAST",
+            "SMART",
+            "RUNNING",
+            "SIMPLEX",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "12:5d:a3:09:b2:6e",
+        "media": "Unknown",
+        "media_select": "none",
+        "mtu": "1500",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "status": "inactive",
+        "type": "ether"
+    },
+    "env": {
+        "CPATH": "/usr/local/include",
+        "HOME": "/Users/ec2-user",
+        "LANG": "en_US.UTF-8",
+        "LC_ADDRESS": "en_ZA.UTF-8",
+        "LC_ALL": "en_US.UTF-8",
+        "LC_IDENTIFICATION": "en_ZA.UTF-8",
+        "LC_MEASUREMENT": "en_ZA.UTF-8",
+        "LC_MESSAGES": "en_US.UTF-8",
+        "LC_MONETARY": "en_ZA.UTF-8",
+        "LC_NAME": "en_ZA.UTF-8",
+        "LC_NUMERIC": "en_ZA.UTF-8",
+        "LC_PAPER": "en_ZA.UTF-8",
+        "LC_TELEPHONE": "en_ZA.UTF-8",
+        "LC_TIME": "en_ZA.UTF-8",
+        "LIBRARY_PATH": "/usr/local/lib",
+        "LOGNAME": "ec2-user",
+        "MAIL": "/var/mail/ec2-user",
+        "MANPATH": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/share/man:/Library/Developer/CommandLineTools/usr/share/man:/Library/Developer/CommandLineTools/Toolchains/XcodeDefault.xctoolchain/usr/share/man:",
+        "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+        "PWD": "/Users/ec2-user",
+        "SDKROOT": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "SHELL": "/bin/zsh",
+        "SHLVL": "1",
+        "SSH_CLIENT": "102.117.2.158 44500 22",
+        "SSH_CONNECTION": "102.117.2.158 44500 172.31.3.173 22",
+        "SSH_TTY": "/dev/ttys000",
+        "TERM": "xterm-256color",
+        "TMPDIR": "/var/folders/ry/pz9cv8wj285gh5bbbcwvp6hr0000gn/T/",
+        "USER": "ec2-user",
+        "_": "/usr/bin/python3",
+        "__CF_USER_TEXT_ENCODING": "0x1F5:0:0"
+    },
+    "fibre_channel_wwn": [],
+    "fips": false,
+    "fqdn": "ip-172-31-3-173.ec2.internal",
+    "gather_subset": [
+        "all"
+    ],
+    "gif0": {
+        "device": "gif0",
+        "flags": [
+            "POINTOPOINT",
+            "MULTICAST"
+        ],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "unknown",
+        "mtu": "1280",
+        "type": "unknown"
+    },
+    "hostname": "ip-172-31-3-173",
+    "hostnqn": "",
+    "interfaces": [
+        "anpi0",
+        "anpi1",
+        "bridge0",
+        "en0",
+        "en2",
+        "en3",
+        "en4",
+        "en5",
+        "en6",
+        "gif0",
+        "lo0",
+        "stf0"
+    ],
+    "is_chroot": false,
+    "iscsi_iqn": "",
+    "kernel": "24.2.0",
+    "kernel_version": "Darwin Kernel Version 24.2.0: Fri Dec  6 18:40:14 PST 2024; root:xnu-11215.61.5~2/RELEASE_ARM64_T8103",
+    "lo0": {
+        "device": "lo0",
+        "flags": [
+            "UP",
+            "LOOPBACK",
+            "RUNNING",
+            "MULTICAST"
+        ],
+        "ipv4": [
+            {
+                "address": "127.0.0.1",
+                "broadcast": "127.255.255.255",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            }
+        ],
+        "ipv6": [
+            {
+                "address": "::1",
+                "prefix": "128"
+            },
+            {
+                "address": "fe80::1%lo0",
+                "prefix": "64",
+                "scope": "0x1"
+            }
+        ],
+        "macaddress": "unknown",
+        "mtu": "16384",
+        "options": [
+            "PERFORMNUD",
+            "DAD"
+        ],
+        "type": "loopback"
+    },
+    "loadavg": {
+        "15m": 1.173828125,
+        "1m": 1.45654296875,
+        "5m": 1.4404296875
+    },
+    "lsb": {},
+    "machine": "arm64",
+    "memfree_mb": 14861,
+    "memtotal_mb": 16384,
+    "model": "Macmini9,1",
+    "module_setup": true,
+    "nodename": "ip-172-31-3-173.ec2.internal",
+    "os_family": "Darwin",
+    "osrevision": "199506",
+    "osversion": "24C101",
+    "pkg_mgr": "homebrew",
+    "processor": "Apple M1",
+    "processor_cores": "8",
+    "processor_vcpus": "8",
+    "product_name": "Macmini9,1",
+    "python": {
+        "executable": "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "has_sslcontext": true,
+        "type": "cpython",
+        "version": {
+            "major": 3,
+            "micro": 6,
+            "minor": 9,
+            "releaselevel": "final",
+            "serial": 0
+        },
+        "version_info": [
+            3,
+            9,
+            6,
+            "final",
+            0
+        ]
+    },
+    "python_version": "3.9.6",
+    "real_group_id": 20,
+    "real_user_id": 501,
+    "selinux": {
+        "status": "Missing selinux Python library"
+    },
+    "selinux_python_present": false,
+    "service_mgr": "launchd",
+    "ssh_host_key_dsa_public": "AAAAB3NzaC1kc3MAAACBALqQfcKLYKc2myjPthLJa0Kd9KM9gFLRSe0W8/GfcW5EhR4qHhFBAdFDJprAbygfb40xnmM2AQkIrEkbmqbfLfwWMAj3sV+oPblMN1pBulE/i3cklijZy1SftZw07JShLOxODjAn8LnSgqqqh1u5XIfYC3VmoBxVBWAhNwMZ1m5HAAAAFQCqvdFdjfO1+JjPSg6secryr582GwAAAIB9mtYIVgGu2nqLDRcef7H3y1rDkal2qBcjlpO1qifS96tUCajizkIhgliYpbfB8aGeM8dCMCDcbZ0bUH0sQ5bk1uvYSt0vY+7G45sFyYOTaCCNPg03rLM8wccXvPuUkAKygRdN0Ddj1mAbOInfJG41jJYgc6GPgvYrZVL0/RB1bQAAAIEAuA42q/5fLqX/ivZo4HZZ85cqFdIS7hb5efEbP6XCoDqhayJzIfIdiETZN1Nh+WABwoplk+8m6RvoNRgvwk8Pk8hJEnIVT7oNXt6MB2DdTV/VIV1uKLTm1MN1NWB6qqMRAZAhjQ5qBOKDCGkkCsg3j15NLwPx15645pK/Iz3HMz4=",
+    "ssh_host_key_dsa_public_keytype": "ssh-dss",
+    "ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOCAUchWYkr/24YAPZ1b0BbGgsby2/cCWBgiEQEQXjORrlDQ+4vP2IfCmc7mWGlCqT8thIUGVBWk7n8qIPM0rq8=",
+    "ssh_host_key_ecdsa_public_keytype": "ecdsa-sha2-nistp256",
+    "ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIBJaGGccptVGnh4f1aMXwuKEXFYGKN5n5qHVVt+RHnA+",
+    "ssh_host_key_ed25519_public_keytype": "ssh-ed25519",
+    "ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQDYiXvX4hxHHBCxQuglJWR1wVG37P5nXth0EupFRFfVBiv7PU4V9sybiZlpIZ9wQMSOUuY5blVtdHwkjGh/frbH9SUycwjwK0Sm838wUF8jo7yBcbQ02lJsHfuOilmJmgQxMenUHgDRt8JxoYqYNwXU5s+I8gC6kcpFkUF3fjq9THkfITUuNgirLwjcY/wOiycC2agzr1LEhSmWI5JlWTeZL+a5eEPJd1aMo5S1mjTzJ6D//7WpMXEGudTvTUPbcn1MMDbsMzMGWW8HhDeuNxw2Ujmb0xxhpwXi+EaE9qTVJKPjgf3DVAFp4V/2fSJO8tqkx2krbpZOOnpQrV4n+ojl+AP/x6J42V3w5A7b6aYvzAUs02C1fYJ55NfTGmjsunDJMDT402KxFoWINs7wdwmRv9FXjy2KhNlIWRFh+0Q89c5Mp+AfkrL3csFZGy0hI4NNgjKjFZnyjPE8Y3U+52yWi7G+pE0beFnnkMSMIfNsHe34HvLbXKPsbZqLfFw/5+E=",
+    "ssh_host_key_rsa_public_keytype": "ssh-rsa",
+    "stf0": {
+        "device": "stf0",
+        "flags": [],
+        "ipv4": [],
+        "ipv6": [],
+        "macaddress": "unknown",
+        "mtu": "1280",
+        "type": "unknown"
+    },
+    "system": "Darwin",
+    "system_capabilities": "N/A",
+    "system_capabilities_enforced": "N/A",
+    "uptime_seconds": 1247,
+    "user_dir": "/Users/ec2-user",
+    "user_gecos": "ec2-user",
+    "user_gid": 20,
+    "user_id": "ec2-user",
+    "user_shell": "/bin/zsh",
+    "user_uid": 501,
+    "userspace_bits": "64",
+    "virtualization_role": "",
+    "virtualization_tech_guest": [],
+    "virtualization_tech_host": [],
+    "virtualization_type": ""
+}
