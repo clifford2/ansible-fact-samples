@@ -7,9 +7,9 @@
   hosts: all
   become: false
   gather_facts: false
-  vars:
+  vars_files:
 
-    local_save_basedir: 'output'
+    - vars/common.yml
 
   tasks:
 

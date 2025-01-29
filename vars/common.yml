@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: © 2025 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
+# Common variables, used by multiple paybooks
+---
+local_save_basedir: 'output'
+facts_to_display:
+  - system
+  - os_family
+  - architecture
+  - kernel
+  - distribution
+  - distribution_major_version
+  - distribution_release
+  - distribution_version
+  - distribution_file_variety
+  - virtualization_role
+  - virtualization_type
