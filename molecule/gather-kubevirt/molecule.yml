@@ -19,35 +19,35 @@ platforms:
 #    ansible_user: cloud-user
 #    memory: 1Gi
   - name: facts-centos9
-    image: docker.io/cliffordw/kubevirt-containerdisk:centos-stream9.v20250113.0
+    image: ghcr.io/clifford2/kubevirt-containerdisk:centos-stream9.v20251223.0
     namespace: molecule
     ssh_service:
       type: NodePort
     ansible_user: molecule
     memory: 1Gi
   - name: facts-centos10
-    image: docker.io/cliffordw/kubevirt-containerdisk:centos-stream10.v20250113.0
+    image: ghcr.io/clifford2/kubevirt-containerdisk:centos-stream10.v20251223.1
     namespace: molecule
     ssh_service:
       type: NodePort
     ansible_user: molecule
     memory: 1Gi
 #  - name: facts-debian12
-#    image: docker.io/cliffordw/kubevirt-containerdisk:debian12.v20250115-1993
+#    image: ghcr.io/clifford2/kubevirt-containerdisk:debian12.v20251112-2294
 #    namespace: molecule
 #    ssh_service:
 #      type: NodePort
 #    ansible_user: molecule
 #    memory: 1Gi
   - name: facts-opensuse15
-    image: docker.io/cliffordw/kubevirt-containerdisk:opensuse-15.6.v1.135
+    image: ghcr.io/clifford2/kubevirt-containerdisk:opensuse-15.6.v1.0.2-1.99
     namespace: molecule
     ssh_service:
       type: NodePort
     ansible_user: molecule
     memory: 1Gi
   - name: facts-ubuntu24
-    image: docker.io/cliffordw/kubevirt-containerdisk:ubuntu2404.v20250115
+    image: ghcr.io/clifford2/kubevirt-containerdisk:ubuntu2404.v20251213
     namespace: molecule
     ssh_service:
       type: NodePort

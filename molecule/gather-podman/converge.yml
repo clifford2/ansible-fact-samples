@@ -3,5 +3,5 @@
 # SPDX-License-Identifier: MIT-0
 
 ---
-- name: Include gather playbook
-  ansible.builtin.import_playbook: ../../gather.yml
+- name: "Include gather playbook"
+  ansible.builtin.import_playbook: "../../playbooks/gather.yml"

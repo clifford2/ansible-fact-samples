@@ -5,31 +5,30 @@
 # Gather key OS facts, and display them
 # Demonstrate how these can be used for conditional tasks
 ---
-- name: 'Show OS details'
-  hosts: all
+- name: "Show OS details"
+  hosts: "all"
   become: false
   gather_facts: false
   vars_files:
-
-    - ../vars/common.yml
+    - "../vars/common.yml"
 
   tasks:
 
-    - name: 'Collect required facts'
+    - name: "Collect required facts"
       ansible.builtin.setup:
         gather_subset:
           - "{{ item }}"
       when: ansible_facts[item] is undefined
       loop:
-        - os_family
-        - virtual
+        - "os_family"
+        - "virtual"
 
-    - name: 'Display all ansible_facts'
+    - name: "Display all ansible_facts"
       ansible.builtin.debug:
         msg: "{{ ansible_facts }}"
         verbosity: 1
 
-    - name: 'Display key ansible_facts'
+    - name: "Display key ansible_facts"
       ansible.builtin.debug:
         msg: "grep-friendly: {{ inventory_hostname }}: {{ item }}: {{ ansible_facts[item] | lower }}"
       loop: "{{ facts_to_display }}"
@@ -38,73 +37,73 @@
       ansible.builtin.set_fact:
         running_in_container: "{{ ((ansible_facts['virtualization_role'] == 'guest') and ((ansible_facts['virtualization_type'] == 'container') or (ansible_facts['virtualization_type'] == 'podman') or (ansible_facts['virtualization_type'] == 'docker'))) | bool }}"
 
-    - name: 'Condition example: are we in a container?'
+    - name: "Condition example: are we in a container?"
       ansible.builtin.debug:
         msg: "In a container? {{ running_in_container }}"
 
     # Examples of conditional execution
-    - name: 'Condition example: are we running a Debian based Linux distribution?'
+    - name: "Condition example: are we running a Debian based Linux distribution?"
       ansible.builtin.debug:
         msg: "{{ ansible_facts.os_family }}"
       when: ansible_facts.os_family | lower == 'debian'
 
-    - name: 'Condition example: are we running a Red Hat based Linux distribution?'
+    - name: "Condition example: are we running a Red Hat based Linux distribution?"
       ansible.builtin.debug:
         msg: "{{ ansible_facts.os_family }}"
       when: ansible_facts.os_family | lower == 'redhat'
 
-    - name: 'Condition example: are we running a SUSE based Linux distribution?'
+    - name: "Condition example: are we running a SUSE based Linux distribution?"
       ansible.builtin.debug:
         msg: "{{ ansible_facts.os_family }}"
       when: ansible_facts.os_family | lower == 'suse'
 
-    - name: 'Condition example: are we running AIX?'
+    - name: "Condition example: are we running AIX?"
       ansible.builtin.debug:
         msg: "{{ ansible_facts.os_family }}"
       when: ansible_facts.os_family | lower == 'aix'
 
-    - name: 'Is this an AIX WPAR?'
+    - name: "Is this an AIX WPAR?"
       when: ansible_facts.os_family | lower == 'aix'
       block:
 
-        - name: 'Check whether this is a WPAR'
-          ansible.builtin.command: uname -W
-          register: wpar
+        - name: "Check whether this is a WPAR"
+          ansible.builtin.command: "uname -W"
+          register: "wpar"
           changed_when: false
 
-        - name: 'Set is_wpar WPAR fact'
+        - name: "Set is_wpar WPAR fact"
           ansible.builtin.set_fact:
             is_wpar: "{{ wpar.stdout_lines[0] | trim | int > 0 }}"
 
-        - name: 'Set not_wpar WPAR fact'
+        - name: "Set not_wpar WPAR fact"
           ansible.builtin.set_fact:
             not_wpar: "{{ wpar.stdout_lines[0] | trim | int == 0 }}"
 
-        - name: 'Condition example:  AIX - running in a WPAR?'
+        - name: "Condition example:  AIX - running in a WPAR?"
           ansible.builtin.debug:
-            msg: 'This is an AIX WPAR'
+            msg: "This is an AIX WPAR"
           when:
             - is_wpar
 
-        - name: 'Condition example:  AIX - not running in a WPAR?'
+        - name: "Condition example:  AIX - not running in a WPAR?"
           ansible.builtin.debug:
-            msg: 'This is an AIX physical / virtual host, not a WPAR'
+            msg: "This is an AIX physical / virtual host, not a WPAR"
           when:
             - not_wpar
 
     # Newer Ansible versions fail in RHEL 8 based systems with (in dnf module):
     # SyntaxError: future feature annotations is not defined
     # Details: https://www.jeffgeerling.com/blog/2024/newer-versions-ansible-dont-work-rhel-8
-    - name: 'Check Ansible compatibility for RHEL 8 or older'
+    - name: "Check Ansible compatibility for RHEL 8 or older"
       when:
         - ansible_facts.os_family | lower == 'redhat'
         - (ansible_facts.distribution | lower == 'redhat') or (ansible_facts.distribution | lower == 'centos')
       block:
 
-        - name: 'Check compatibility with RHEL'
+        - name: "Check compatibility with RHEL"
           ansible.builtin.set_fact:
             rhel8_compat: "{{ (ansible_version.full is ansible.builtin.version('2.17.0', '<')) or ((ansible_facts['distribution_major_version'] | int) > 8) }}"
 
-        - name: 'Show RHEL compatibility status'
+        - name: "Show RHEL compatibility status"
           ansible.builtin.debug:
             msg: "We can{% if not rhel8_compat %}'t{% endif %} support {{ ansible_facts.distribution }} {{ ansible_facts['distribution_major_version'] }} with Ansible {{ ansible_version.full }}"

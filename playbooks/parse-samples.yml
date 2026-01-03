@@ -5,14 +5,13 @@
 # Parse JSON sample output files for key OS information
 # Save results to a JSON file (output/parse-samples-summary.json)
 ---
-- name: 'Parse sample JSON files'
-  hosts: localhost
-  connection: local
+- name: "Parse sample JSON files"
+  hosts: "localhost"
+  connection: "local"
   become: false
   gather_facts: false
   vars_files:
-
-    - ../vars/common.yml
+    - "../vars/common.yml"
 
   vars:
 
@@ -25,45 +24,45 @@
 
   tasks:
 
-    - name: 'Count how many characters to cut from start of file names'
+    - name: "Count how many characters to cut from start of file names"
       ansible.builtin.set_fact:
         cut_chars: "{{ local_save_basedir | length + 1 }}"
 
-    - name: 'Find relevant JSON files'
+    - name: "Find relevant JSON files"
       ansible.builtin.find:
         paths: "{{ search_paths }}"
-        file_type: file
+        file_type: "file"
         use_regex: false
-        patterns: '*.json'
+        patterns: "*.json"
         recurse: true
-      register: jsonfiles
+      register: "jsonfiles"
 
-    - name: 'Display list of files'
+    - name: "Display list of files"
       ansible.builtin.debug:
         msg: "{{ file.path }}"
       loop: "{{ jsonfiles.files }}"
       loop_control:
-        loop_var: file
+        loop_var: "file"
         label: "{{ file.path | ansible.builtin.basename }}"
-      tags: [never, debug]
+      tags: ["never", "debug"]
 
-    - name: 'Initialize output list'
+    - name: "Initialize output list"
       ansible.builtin.set_fact:
         all_file_facts: []
 
-    - name: 'Read JSON files'
+    - name: "Read JSON files"
       ansible.builtin.include_tasks: parse-samples-loop.yml
       loop: "{{ jsonfiles.files }}"
       loop_control:
-        loop_var: file
+        loop_var: "file"
         label: "{{ file.path | ansible.builtin.basename }}"
 
-    - name: 'Save summary to file'
+    - name: "Save summary to file"
       ansible.builtin.copy:
         content: "{{ all_file_facts | to_nice_json }}"
         dest: "{{ summary_json_path }}"
 
-    - name: 'Show facts for all sample files'
+    - name: "Show facts for all sample files"
       ansible.builtin.debug:
         msg: "{{ all_file_facts | to_nice_json }}"
-      tags: [never, debug]
+      tags: ["never", "debug"]

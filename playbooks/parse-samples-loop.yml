@@ -5,40 +5,40 @@
 # Included from parse-samples.yml
 # Loop handler - processes individual JSON files
 ---
-- name: 'Read JSON file'
+- name: "Read JSON file"
   ansible.builtin.set_fact:
     jsondata: "{{ lookup('ansible.builtin.file', file.path) | from_json }}"
 
-- name: 'Display JSON data'
+- name: "Display JSON data"
   ansible.builtin.debug:
     msg: "{{ jsondata }}"
     verbosity: 1
   tags: [never, debug]
 
-- name: 'Display key ansible_facts individually'
+- name: "Display key ansible_facts individually"
   ansible.builtin.debug:
     msg: "grep-friendly: {{ file.path[(cut_chars | int):] }}: {{ fact }}: {{ jsondata[fact] | default('*unknown*', true) }}"
   loop: "{{ facts_to_display }}"
   loop_control:
-    loop_var: fact
-  tags: [never, debug]
+    loop_var: "fact"
+  tags: ["never", "debug"]
 
-- name: 'Initialize list of facts to display'
+- name: "Initialize list of facts to display"
   ansible.builtin.set_fact:
     my_facts:
       _sample_file: "{{ file.path[(cut_chars | int):] }}"
 
-- name: 'Build list of host facts to display'
+- name: "Build list of host facts to display"
   ansible.builtin.set_fact:
     my_facts: "{{ (my_facts | default({})) | combine({fact: jsondata[fact] | default('*unknown*', true)}) }}"
   loop: "{{ facts_to_display }}"
   loop_control:
-    loop_var: fact
+    loop_var: "fact"
 
-- name: 'Append host list to combined output list'
+- name: "Append host list to combined output list"
   ansible.builtin.set_fact:
     all_file_facts: "{{ (all_file_facts | default([])) + [my_facts] }}"
 
-- name: 'Show combined facts'
+- name: "Show combined facts"
   ansible.builtin.debug:
     msg: "{{ my_facts }}"

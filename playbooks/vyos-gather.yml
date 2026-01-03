@@ -3,42 +3,41 @@
 # SPDX-License-Identifier: MIT-0
 
 ---
-- name: 'Gather Ansible facts for VyOS devices'
-  hosts: all
+- name: "Gather Ansible facts for VyOS devices"
+  hosts: "all"
   become: false
   gather_facts: false
   vars_files:
-
-    - ../vars/common.yml
+    - "../vars/common.yml"
 
   tasks:
 
-    - name: 'Construct output directory name'
+    - name: "Construct output directory name"
       ansible.builtin.set_fact:
         local_save_dir: "{{ (local_save_basedir, 'network', 'vyos') | ansible.builtin.path_join }}"
 
-    - name: 'Collect date_time info'
+    - name: "Collect date_time info"
       ansible.builtin.setup:
         gather_subset:
-          - date_time
+          - "date_time"
       when: ansible_date_time is undefined
 
-    - name: 'Construct output file name'
+    - name: "Construct output file name"
       ansible.builtin.set_fact:
         local_save_file: "{{ (play_hosts | ansible.utils.index_of('eq', inventory_hostname) | string) + '-' + ansible_date_time.iso8601_basic_short }}"
 
-    - name: 'Ensure local output directory exists'
+    - name: "Ensure local output directory exists"
       ansible.builtin.file:
         path: "{{ local_save_dir }}"
-        state: directory
-        mode: '0755'
-      delegate_to: localhost
+        state: "directory"
+        mode: "0755"
+      delegate_to: "localhost"
 
-    - name: 'Gather VyOS facts'
+    - name: "Gather VyOS facts"
       vyos.vyos.vyos_facts:
 
-    - name: 'Save facts to localhost file'
+    - name: "Save facts to localhost file"
       ansible.builtin.copy:
         content: "{{ ansible_facts | to_nice_json }}"
         dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
-      delegate_to: localhost
+      delegate_to: "localhost"
