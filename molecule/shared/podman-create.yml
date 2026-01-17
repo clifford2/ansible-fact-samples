@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: MIT-0
 
 ---
-- name: Create
-  hosts: localhost
+- name: "Create"
+  hosts: "localhost"
   gather_facts: false
   vars:
     molecule_inventory:
@@ -15,7 +15,7 @@
             hosts: {}
 
   tasks:
-    - name: Create a container
+    - name: "Create a container"
       containers.podman.podman_container:
         name: "{{ item.name }}"
         image: "{{ item.image }}"
@@ -30,11 +30,14 @@
       register: result
       loop: "{{ molecule_yml.platforms }}"
 
-    - name: Print some info
+    - name: "Print some info"
       ansible.builtin.debug:
-        msg: "{{ result.results }}"
+        msg: "Image: {{ item.container.Config.Image }}"
+      loop: "{{ molecule_podman_container_result.results }}"
+      loop_control:
+        label: "{{ item.item.name }}"
 
-    - name: Fail if container is not running
+    - name: "Fail if container is not running"
       when: >
         item.container.State.ExitCode != 0 or
         not item.container.State.Running
@@ -44,7 +47,7 @@
       loop_control:
         label: "{{ item.container.Name }}"
 
-    - name: Add container to molecule_inventory
+    - name: "Add container to molecule_inventory"
       vars:
         inventory_partial_yaml: |
           all:
@@ -62,17 +65,17 @@
       loop_control:
         label: "{{ item.name }}"
 
-    - name: Dump molecule_inventory
+    - name: "Dump molecule_inventory"
       ansible.builtin.copy:
         content: |
           {{ molecule_inventory | to_yaml }}
         dest: "{{ molecule_ephemeral_directory }}/inventory/molecule_inventory.yml"
         mode: "0600"
 
-    - name: Force inventory refresh
+    - name: "Force inventory refresh"
       ansible.builtin.meta: refresh_inventory
 
-    - name: Fail if molecule group is missing
+    - name: "Fail if molecule group is missing"
       ansible.builtin.assert:
         that: "'molecule' in groups"
         fail_msg: |
@@ -80,22 +83,22 @@
       run_once: true # noqa: run-once[task]
 
 # we want to avoid errors like "Failed to create temporary directory"
-- name: Validate that inventory was refreshed
-  hosts: molecule
+- name: "Validate that inventory was refreshed"
+  hosts: "molecule"
   gather_facts: false
   tasks:
 
-    - name: 'Check uname'
-      ansible.builtin.raw: uname -a
+    - name: "Check uname"
+      ansible.builtin.raw: "uname -a"
       register: uname_result
       changed_when: false
 
-    - name: 'Read /etc/os-release'
+    - name: "Read /etc/os-release"
       ansible.builtin.slurp:
-        path: /etc/os-release
-      register: osfile
+        path: "/etc/os-release"
+      register: "osfile"
 
-    - name: 'Show OS information'
+    - name: "Show OS information"
       ansible.builtin.debug:
         msg:
           - "uname -a: {{ uname_result.stdout }}"
