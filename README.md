@@ -1,14 +1,24 @@
 # Ansible Facts - Sample Output
 
-[Ansible](https://ansible.readthedocs.io/) playbooks often need to cater for different target systems. This is most easily done by using Ansible [facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html) where possible.
+[Ansible](https://ansible.readthedocs.io/) playbooks often need to cater for different target systems.
+With Ansible [facts](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_vars_facts.html) you can retrieve or discover certain variables containing information about your remote systems or about Ansible itself.
+These facts can then be used to handle the differences between systems.
 
-I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are. This project is an attempt to save some of those samples for easy reference, and share them in case anyone else might find it useful too.
+I spend an inordinate amount of time digging for what facts are available, and what the possible value for each are.
+This project is an attempt to save some of those samples for easy reference, and share them in case anyone else might find it useful too.
 
 Please contribute samples for systems you have access to :-)
 
 Available samples so far include:
 
-- Various Linux distributions
+- Various Linux distributions:
+	- CentOS Stream
+	- Debian
+	- Fedora
+	- openSUSE
+	- RHEL
+	- SLES
+	- Ubuntu
 - macOS
 - Windows Server 2022
 - AIX 7.1, 7.2, 7.3
@@ -34,6 +44,19 @@ I work mostly with Linux, so I have more samples for it than for other targets.
 Besides different distributions, I'm also interested in additional information like whether my playbook is running in a VM or container or not, so some samples cater for this.
 
 The [`molecule/`](molecule) directory contains scenarios for gathering Linux data from within containers (with Podman) and VMs (with KubeVirt).
+See [`molecule/README.md`](molecule/README.md) for more information, and usage instructions.
+
+To collect Linux samples in Podman containers, run:
+
+```bash
+molecule test -s gather-podman
+```
+
+Rename the new files, then run:
+
+```bash
+ansible-playbook playbooks/parse-samples.yml
+```
 
 ### AIX
 
@@ -49,7 +72,11 @@ For AIX we need to ensure that Python 3 is installed first. In IBM Cloud (as of 
 For Mikrotik RouterOS, connect by specifying `ansible_connection` & `ansible_network_os` as per this example:
 
 ```sh
-ansible-playbook -i 192.168.122.216, -e ansible_user=admin -e ansible_connection=ansible.netcommon.network_cli -e ansible_network_os=community.network.routeros gather.yml
+ansible-playbook -i 192.168.122.216, \
+  -e ansible_user=admin \
+  -e ansible_connection=ansible.netcommon.network_cli \
+  -e ansible_network_os=community.network.routeros \
+  playbooks/gather.yml
 ```
 
 ### VyOS
@@ -59,5 +86,9 @@ For VyOS devices, install the prerequisites, then connect by specifying `ansible
 ```bash
 python3 -m pip install -r vyos-requirements.txt
 ansible-galaxy install -r vyos-requirements.yml
-ansible-playbook -i 192.168.122.73, -e ansible_user=vyos -e ansible_connection=ansible.netcommon.network_cli -e ansible_network_os=vyos.vyos.vyos vyos.yml
+ansible-playbook -i 192.168.122.73, \
+  -e ansible_user=vyos \
+  -e ansible_connection=ansible.netcommon.network_cli \
+  -e ansible_network_os=vyos.vyos.vyos
+  playbooks/vyos-gather.yml
 ```
