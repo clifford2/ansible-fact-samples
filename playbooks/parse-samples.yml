@@ -20,6 +20,8 @@
       - "{{ (local_save_basedir, 'darwin') | ansible.builtin.path_join }}"
       - "{{ (local_save_basedir, 'aix') | ansible.builtin.path_join }}"
       - "{{ (local_save_basedir, 'win32nt') | ansible.builtin.path_join }}"
+      # For network samples the facts we're extracting are populated from localhost, and not from the remote device
+      # - "{{ (local_save_basedir, 'network') | ansible.builtin.path_join }}"
     summary_json_path: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
 
   tasks:
@@ -51,7 +53,7 @@
         all_file_facts: []
 
     - name: "Read JSON files"
-      ansible.builtin.include_tasks: parse-samples-loop.yml
+      ansible.builtin.include_tasks: "parse-samples-loop.yml"
       loop: "{{ jsonfiles.files }}"
       loop_control:
         loop_var: "file"
