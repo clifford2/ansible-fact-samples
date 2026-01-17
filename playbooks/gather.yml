@@ -12,8 +12,13 @@
 
   tasks:
 
-    - name: "Gather facts"
+    - name: "Gather useful variables about remote hosts"
       ansible.builtin.setup:
+
+    - name: "Gather information about installed packages"
+      ansible.builtin.package_facts:
+        manager: "auto"
+        strategy: "all"
 
     - name: "Construct output directory name"
       ansible.builtin.set_fact:
