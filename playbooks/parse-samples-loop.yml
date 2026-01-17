@@ -37,7 +37,7 @@
 
 - name: "Check whether this sample contains package facts"
   ansible.builtin.set_fact:
-    my_facts: "{{ (my_facts | default({})) | combine({'_has_package_facts': (jsondata['packages'] is defined)}) }}"
+    my_facts: "{{ (my_facts | default({})) | combine({'_contains_package_facts': (jsondata['packages'] is defined)}) }}"
 
 - name: "Append host list to combined output list"
   ansible.builtin.set_fact:

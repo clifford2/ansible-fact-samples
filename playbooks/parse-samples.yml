@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: MIT-0
 
 # Parse JSON sample output files for key OS information
-# Save results to a JSON file (output/parse-samples-summary.json)
+# Save results to a JSON file (output/samples-summary.json)
 ---
 - name: "Parse sample JSON files"
   hosts: "localhost"
@@ -22,7 +22,7 @@
       - "{{ (local_save_basedir, 'win32nt') | ansible.builtin.path_join }}"
       # For network samples the facts we're extracting are populated from localhost, and not from the remote device
       # - "{{ (local_save_basedir, 'network') | ansible.builtin.path_join }}"
-    summary_json_path: "{{ (local_save_basedir, 'parse-samples-summary') | ansible.builtin.path_join }}.json"
+    summary_json_path: "{{ (local_save_basedir, 'samples-summary') | ansible.builtin.path_join }}.json"
 
   tasks:
 
