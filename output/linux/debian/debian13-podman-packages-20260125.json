@@ -1,0 +1,1140 @@
+{
+    "ansible_local": {},
+    "apparmor": {
+        "status": "disabled"
+    },
+    "architecture": "x86_64",
+    "cmdline": {
+        "BOOT_IMAGE": "/vmlinuz-6.8.0-90-generic",
+        "intel_iommu": "on",
+        "quiet": true,
+        "ro": true,
+        "root": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+        "splash": true,
+        "systemd.unified_cgroup_hierarchy": "1",
+        "vt.handoff": "7"
+    },
+    "date_time": {
+        "date": "2026-01-25",
+        "day": "25",
+        "epoch": "1769328626",
+        "epoch_int": "1769328626",
+        "hour": "08",
+        "iso8601": "2026-01-25T08:10:26Z",
+        "iso8601_basic": "20260125T081026211038",
+        "iso8601_basic_short": "20260125T081026",
+        "iso8601_micro": "2026-01-25T08:10:26.211038Z",
+        "minute": "10",
+        "month": "01",
+        "second": "26",
+        "time": "08:10:26",
+        "tz": "UTC",
+        "tz_dst": "UTC",
+        "tz_offset": "+0000",
+        "weekday": "Sunday",
+        "weekday_number": "0",
+        "weeknumber": "03",
+        "year": "2026"
+    },
+    "discovered_interpreter_python": "/usr/bin/python3",
+    "distribution": "Debian",
+    "distribution_file_parsed": true,
+    "distribution_file_path": "/etc/os-release",
+    "distribution_file_variety": "Debian",
+    "distribution_major_version": "13",
+    "distribution_minor_version": "3",
+    "distribution_release": "trixie",
+    "distribution_version": "13.3",
+    "dns": {
+        "nameservers": [
+            "10.0.2.3",
+            "192.168.68.2"
+        ]
+    },
+    "domain": "",
+    "effective_group_id": 0,
+    "effective_user_id": 0,
+    "env": {
+        "HOME": "/root",
+        "LC_CTYPE": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PWD": "/",
+        "container": "docker"
+    },
+    "fips": false,
+    "fqdn": "63372c08941e",
+    "gather_subset": [
+        "os_family",
+        "distribution"
+    ],
+    "hostname": "63372c08941e",
+    "kernel": "6.8.0-90-generic",
+    "kernel_version": "#91-Ubuntu SMP PREEMPT_DYNAMIC Tue Nov 18 14:14:30 UTC 2025",
+    "lsb": {},
+    "machine": "x86_64",
+    "machine_id": "uninitialized",
+    "module_setup": true,
+    "nodename": "63372c08941e",
+    "os_family": "Debian",
+    "packages": {
+        "apt": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "apt",
+                "origin": "",
+                "source": "apt",
+                "version": "3.0.3"
+            }
+        ],
+        "base-files": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "base-files",
+                "origin": "",
+                "source": "apt",
+                "version": "13.8+deb13u3"
+            }
+        ],
+        "base-passwd": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "base-passwd",
+                "origin": "",
+                "source": "apt",
+                "version": "3.6.7"
+            }
+        ],
+        "bash": [
+            {
+                "arch": "amd64",
+                "category": "shells",
+                "name": "bash",
+                "origin": "",
+                "source": "apt",
+                "version": "5.2.37-2+b7"
+            }
+        ],
+        "bsdutils": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "bsdutils",
+                "origin": "",
+                "source": "apt",
+                "version": "1:2.41-5"
+            }
+        ],
+        "coreutils": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "coreutils",
+                "origin": "",
+                "source": "apt",
+                "version": "9.7-3"
+            }
+        ],
+        "dash": [
+            {
+                "arch": "amd64",
+                "category": "shells",
+                "name": "dash",
+                "origin": "",
+                "source": "apt",
+                "version": "0.5.12-12"
+            }
+        ],
+        "debconf": [
+            {
+                "arch": "all",
+                "category": "admin",
+                "name": "debconf",
+                "origin": "",
+                "source": "apt",
+                "version": "1.5.91"
+            }
+        ],
+        "debian-archive-keyring": [
+            {
+                "arch": "all",
+                "category": "misc",
+                "name": "debian-archive-keyring",
+                "origin": "",
+                "source": "apt",
+                "version": "2025.1"
+            }
+        ],
+        "debianutils": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "debianutils",
+                "origin": "",
+                "source": "apt",
+                "version": "5.23.2"
+            }
+        ],
+        "diffutils": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "diffutils",
+                "origin": "",
+                "source": "apt",
+                "version": "1:3.10-4"
+            }
+        ],
+        "distro-info-data": [
+            {
+                "arch": "all",
+                "category": "devel",
+                "name": "distro-info-data",
+                "origin": "",
+                "source": "apt",
+                "version": "0.66+deb13u1"
+            }
+        ],
+        "dpkg": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "dpkg",
+                "origin": "",
+                "source": "apt",
+                "version": "1.22.21"
+            }
+        ],
+        "findutils": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "findutils",
+                "origin": "",
+                "source": "apt",
+                "version": "4.10.0-3"
+            }
+        ],
+        "gcc-14-base": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "gcc-14-base",
+                "origin": "",
+                "source": "apt",
+                "version": "14.2.0-19"
+            }
+        ],
+        "grep": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "grep",
+                "origin": "",
+                "source": "apt",
+                "version": "3.11-4"
+            }
+        ],
+        "gzip": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "gzip",
+                "origin": "",
+                "source": "apt",
+                "version": "1.13-1"
+            }
+        ],
+        "hostname": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "hostname",
+                "origin": "",
+                "source": "apt",
+                "version": "3.25"
+            }
+        ],
+        "init-system-helpers": [
+            {
+                "arch": "all",
+                "category": "admin",
+                "name": "init-system-helpers",
+                "origin": "",
+                "source": "apt",
+                "version": "1.69~deb13u1"
+            }
+        ],
+        "libacl1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libacl1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.3.2-2+b1"
+            }
+        ],
+        "libapparmor1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libapparmor1",
+                "origin": "",
+                "source": "apt",
+                "version": "4.1.0-1"
+            }
+        ],
+        "libapt-pkg7.0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libapt-pkg7.0",
+                "origin": "",
+                "source": "apt",
+                "version": "3.0.3"
+            }
+        ],
+        "libattr1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libattr1",
+                "origin": "",
+                "source": "apt",
+                "version": "1:2.5.2-3"
+            }
+        ],
+        "libaudit-common": [
+            {
+                "arch": "all",
+                "category": "libs",
+                "name": "libaudit-common",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.0.2-2"
+            }
+        ],
+        "libaudit1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libaudit1",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.0.2-2+b2"
+            }
+        ],
+        "libblkid1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libblkid1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "libbsd0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libbsd0",
+                "origin": "",
+                "source": "apt",
+                "version": "0.12.2-2"
+            }
+        ],
+        "libbz2-1.0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libbz2-1.0",
+                "origin": "",
+                "source": "apt",
+                "version": "1.0.8-6"
+            }
+        ],
+        "libc-bin": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libc-bin",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-12+deb13u1"
+            }
+        ],
+        "libc6": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libc6",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-12+deb13u1"
+            }
+        ],
+        "libcap-ng0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libcap-ng0",
+                "origin": "",
+                "source": "apt",
+                "version": "0.8.5-4+b1"
+            }
+        ],
+        "libcap2": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libcap2",
+                "origin": "",
+                "source": "apt",
+                "version": "1:2.75-10+b3"
+            }
+        ],
+        "libcrypt1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libcrypt1",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.4.38-1"
+            }
+        ],
+        "libdb5.3t64": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libdb5.3t64",
+                "origin": "",
+                "source": "apt",
+                "version": "5.3.28+dfsg2-9"
+            }
+        ],
+        "libdebconfclient0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libdebconfclient0",
+                "origin": "",
+                "source": "apt",
+                "version": "0.280"
+            }
+        ],
+        "libexpat1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libexpat1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.7.1-2"
+            }
+        ],
+        "libffi8": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libffi8",
+                "origin": "",
+                "source": "apt",
+                "version": "3.4.8-2"
+            }
+        ],
+        "libgcc-s1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libgcc-s1",
+                "origin": "",
+                "source": "apt",
+                "version": "14.2.0-19"
+            }
+        ],
+        "libgmp10": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libgmp10",
+                "origin": "",
+                "source": "apt",
+                "version": "2:6.3.0+dfsg-3"
+            }
+        ],
+        "libhogweed6t64": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libhogweed6t64",
+                "origin": "",
+                "source": "apt",
+                "version": "3.10.1-1"
+            }
+        ],
+        "liblastlog2-2": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "liblastlog2-2",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "liblz4-1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "liblz4-1",
+                "origin": "",
+                "source": "apt",
+                "version": "1.10.0-4"
+            }
+        ],
+        "liblzma5": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "liblzma5",
+                "origin": "",
+                "source": "apt",
+                "version": "5.8.1-1"
+            }
+        ],
+        "libmd0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libmd0",
+                "origin": "",
+                "source": "apt",
+                "version": "1.1.0-2+b1"
+            }
+        ],
+        "libmount1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libmount1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "libncursesw6": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libncursesw6",
+                "origin": "",
+                "source": "apt",
+                "version": "6.5+20250216-2"
+            }
+        ],
+        "libnettle8t64": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libnettle8t64",
+                "origin": "",
+                "source": "apt",
+                "version": "3.10.1-1"
+            }
+        ],
+        "libpam-modules": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "libpam-modules",
+                "origin": "",
+                "source": "apt",
+                "version": "1.7.0-5"
+            }
+        ],
+        "libpam-modules-bin": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "libpam-modules-bin",
+                "origin": "",
+                "source": "apt",
+                "version": "1.7.0-5"
+            }
+        ],
+        "libpam-runtime": [
+            {
+                "arch": "all",
+                "category": "admin",
+                "name": "libpam-runtime",
+                "origin": "",
+                "source": "apt",
+                "version": "1.7.0-5"
+            }
+        ],
+        "libpam0g": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libpam0g",
+                "origin": "",
+                "source": "apt",
+                "version": "1.7.0-5"
+            }
+        ],
+        "libpcre2-8-0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libpcre2-8-0",
+                "origin": "",
+                "source": "apt",
+                "version": "10.46-1~deb13u1"
+            }
+        ],
+        "libproc2-0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libproc2-0",
+                "origin": "",
+                "source": "apt",
+                "version": "2:4.0.4-9"
+            }
+        ],
+        "libpython3-stdlib": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "libpython3-stdlib",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-1"
+            }
+        ],
+        "libpython3.13-minimal": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "libpython3.13-minimal",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-2"
+            }
+        ],
+        "libpython3.13-stdlib": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "libpython3.13-stdlib",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-2"
+            }
+        ],
+        "libreadline8t64": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libreadline8t64",
+                "origin": "",
+                "source": "apt",
+                "version": "8.2-6"
+            }
+        ],
+        "libseccomp2": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libseccomp2",
+                "origin": "",
+                "source": "apt",
+                "version": "2.6.0-2"
+            }
+        ],
+        "libselinux1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libselinux1",
+                "origin": "",
+                "source": "apt",
+                "version": "3.8.1-1"
+            }
+        ],
+        "libsemanage-common": [
+            {
+                "arch": "all",
+                "category": "libs",
+                "name": "libsemanage-common",
+                "origin": "",
+                "source": "apt",
+                "version": "3.8.1-1"
+            }
+        ],
+        "libsemanage2": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsemanage2",
+                "origin": "",
+                "source": "apt",
+                "version": "3.8.1-1"
+            }
+        ],
+        "libsepol2": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsepol2",
+                "origin": "",
+                "source": "apt",
+                "version": "3.8.1-1"
+            }
+        ],
+        "libsmartcols1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsmartcols1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "libsqlite3-0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsqlite3-0",
+                "origin": "",
+                "source": "apt",
+                "version": "3.46.1-7"
+            }
+        ],
+        "libssl3t64": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libssl3t64",
+                "origin": "",
+                "source": "apt",
+                "version": "3.5.4-1~deb13u1"
+            }
+        ],
+        "libstdc++6": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libstdc++6",
+                "origin": "",
+                "source": "apt",
+                "version": "14.2.0-19"
+            }
+        ],
+        "libsystemd-shared": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsystemd-shared",
+                "origin": "",
+                "source": "apt",
+                "version": "257.9-1~deb13u1"
+            }
+        ],
+        "libsystemd0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libsystemd0",
+                "origin": "",
+                "source": "apt",
+                "version": "257.9-1~deb13u1"
+            }
+        ],
+        "libtinfo6": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libtinfo6",
+                "origin": "",
+                "source": "apt",
+                "version": "6.5+20250216-2"
+            }
+        ],
+        "libudev1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libudev1",
+                "origin": "",
+                "source": "apt",
+                "version": "257.9-1~deb13u1"
+            }
+        ],
+        "libuuid1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libuuid1",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "libxxhash0": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libxxhash0",
+                "origin": "",
+                "source": "apt",
+                "version": "0.8.3-2"
+            }
+        ],
+        "libzstd1": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "libzstd1",
+                "origin": "",
+                "source": "apt",
+                "version": "1.5.7+dfsg-1"
+            }
+        ],
+        "login": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "login",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.16.0-2+really2.41-5"
+            }
+        ],
+        "login.defs": [
+            {
+                "arch": "all",
+                "category": "admin",
+                "name": "login.defs",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.17.4-2"
+            }
+        ],
+        "mawk": [
+            {
+                "arch": "amd64",
+                "category": "interpreters",
+                "name": "mawk",
+                "origin": "",
+                "source": "apt",
+                "version": "1.3.4.20250131-1"
+            }
+        ],
+        "media-types": [
+            {
+                "arch": "all",
+                "category": "net",
+                "name": "media-types",
+                "origin": "",
+                "source": "apt",
+                "version": "13.0.0"
+            }
+        ],
+        "mount": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "mount",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "ncurses-base": [
+            {
+                "arch": "all",
+                "category": "misc",
+                "name": "ncurses-base",
+                "origin": "",
+                "source": "apt",
+                "version": "6.5+20250216-2"
+            }
+        ],
+        "ncurses-bin": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "ncurses-bin",
+                "origin": "",
+                "source": "apt",
+                "version": "6.5+20250216-2"
+            }
+        ],
+        "netbase": [
+            {
+                "arch": "all",
+                "category": "admin",
+                "name": "netbase",
+                "origin": "",
+                "source": "apt",
+                "version": "6.5"
+            }
+        ],
+        "openssl-provider-legacy": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "openssl-provider-legacy",
+                "origin": "",
+                "source": "apt",
+                "version": "3.5.4-1~deb13u1"
+            }
+        ],
+        "passwd": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "passwd",
+                "origin": "",
+                "source": "apt",
+                "version": "1:4.17.4-2"
+            }
+        ],
+        "perl-base": [
+            {
+                "arch": "amd64",
+                "category": "perl",
+                "name": "perl-base",
+                "origin": "",
+                "source": "apt",
+                "version": "5.40.1-6"
+            }
+        ],
+        "procps": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "procps",
+                "origin": "",
+                "source": "apt",
+                "version": "2:4.0.4-9"
+            }
+        ],
+        "python-apt-common": [
+            {
+                "arch": "all",
+                "category": "python",
+                "name": "python-apt-common",
+                "origin": "",
+                "source": "apt",
+                "version": "3.0.0"
+            }
+        ],
+        "python3": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "python3",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-1"
+            }
+        ],
+        "python3-apt": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "python3-apt",
+                "origin": "",
+                "source": "apt",
+                "version": "3.0.0"
+            }
+        ],
+        "python3-minimal": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "python3-minimal",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-1"
+            }
+        ],
+        "python3.13": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "python3.13",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-2"
+            }
+        ],
+        "python3.13-minimal": [
+            {
+                "arch": "amd64",
+                "category": "python",
+                "name": "python3.13-minimal",
+                "origin": "",
+                "source": "apt",
+                "version": "3.13.5-2"
+            }
+        ],
+        "readline-common": [
+            {
+                "arch": "all",
+                "category": "utils",
+                "name": "readline-common",
+                "origin": "",
+                "source": "apt",
+                "version": "8.2-6"
+            }
+        ],
+        "sed": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "sed",
+                "origin": "",
+                "source": "apt",
+                "version": "4.9-2"
+            }
+        ],
+        "sqv": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "sqv",
+                "origin": "",
+                "source": "apt",
+                "version": "1.3.0-3+b2"
+            }
+        ],
+        "systemd": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "systemd",
+                "origin": "",
+                "source": "apt",
+                "version": "257.9-1~deb13u1"
+            }
+        ],
+        "systemd-sysv": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "systemd-sysv",
+                "origin": "",
+                "source": "apt",
+                "version": "257.9-1~deb13u1"
+            }
+        ],
+        "sysvinit-utils": [
+            {
+                "arch": "amd64",
+                "category": "admin",
+                "name": "sysvinit-utils",
+                "origin": "",
+                "source": "apt",
+                "version": "3.14-4"
+            }
+        ],
+        "tar": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "tar",
+                "origin": "",
+                "source": "apt",
+                "version": "1.35+dfsg-3.1"
+            }
+        ],
+        "tzdata": [
+            {
+                "arch": "all",
+                "category": "localization",
+                "name": "tzdata",
+                "origin": "",
+                "source": "apt",
+                "version": "2025b-4+deb13u1"
+            }
+        ],
+        "util-linux": [
+            {
+                "arch": "amd64",
+                "category": "utils",
+                "name": "util-linux",
+                "origin": "",
+                "source": "apt",
+                "version": "2.41-5"
+            }
+        ],
+        "zlib1g": [
+            {
+                "arch": "amd64",
+                "category": "libs",
+                "name": "zlib1g",
+                "origin": "",
+                "source": "apt",
+                "version": "1:1.3.dfsg+really1.3.1-1+b1"
+            }
+        ]
+    },
+    "pkg_mgr": "apt",
+    "proc_cmdline": {
+        "BOOT_IMAGE": "/vmlinuz-6.8.0-90-generic",
+        "intel_iommu": "on",
+        "quiet": true,
+        "ro": true,
+        "root": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+        "splash": true,
+        "systemd.unified_cgroup_hierarchy": "1",
+        "vt.handoff": "7"
+    },
+    "python": {
+        "executable": "/usr/bin/python3",
+        "has_sslcontext": true,
+        "type": "cpython",
+        "version": {
+            "major": 3,
+            "micro": 5,
+            "minor": 13,
+            "releaselevel": "final",
+            "serial": 0
+        },
+        "version_info": [
+            3,
+            13,
+            5,
+            "final",
+            0
+        ]
+    },
+    "python_version": "3.13.5",
+    "real_group_id": 0,
+    "real_user_id": 0,
+    "selinux": {
+        "status": "disabled"
+    },
+    "selinux_python_present": true,
+    "service_mgr": "systemd",
+    "system": "Linux",
+    "system_capabilities": "N/A",
+    "system_capabilities_enforced": "N/A",
+    "user_dir": "/root",
+    "user_gecos": "root",
+    "user_gid": 0,
+    "user_id": "root",
+    "user_shell": "/bin/bash",
+    "user_uid": 0,
+    "userspace_architecture": "x86_64",
+    "userspace_bits": "64"
+}

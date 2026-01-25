@@ -1,0 +1,4096 @@
+{
+    "ansible_local": {},
+    "apparmor": {
+        "status": "disabled"
+    },
+    "architecture": "x86_64",
+    "bios_date": "08/18/2025",
+    "bios_vendor": "Dell Inc.",
+    "bios_version": "1.25.1",
+    "board_asset_tag": "NA",
+    "board_name": "0CTN2P",
+    "board_serial": "NA",
+    "board_vendor": "Dell Inc.",
+    "board_version": "A00",
+    "chassis_asset_tag": "NA",
+    "chassis_serial": "NA",
+    "chassis_vendor": "Dell Inc.",
+    "chassis_version": "NA",
+    "cmdline": {
+        "BOOT_IMAGE": "/vmlinuz-6.8.0-90-generic",
+        "intel_iommu": "on",
+        "quiet": true,
+        "ro": true,
+        "root": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+        "splash": true,
+        "systemd.unified_cgroup_hierarchy": "1",
+        "vt.handoff": "7"
+    },
+    "date_time": {
+        "date": "2026-01-25",
+        "day": "25",
+        "epoch": "1769323931",
+        "epoch_int": "1769323931",
+        "hour": "06",
+        "iso8601": "2026-01-25T06:52:11Z",
+        "iso8601_basic": "20260125T065211241020",
+        "iso8601_basic_short": "20260125T065211",
+        "iso8601_micro": "2026-01-25T06:52:11.241020Z",
+        "minute": "52",
+        "month": "01",
+        "second": "11",
+        "time": "06:52:11",
+        "tz": "UTC",
+        "tz_dst": "UTC",
+        "tz_offset": "+0000",
+        "weekday": "Sunday",
+        "weekday_number": "0",
+        "weeknumber": "03",
+        "year": "2026"
+    },
+    "device_links": {
+        "ids": {},
+        "labels": {},
+        "masters": {
+            "dm-0": [
+                "dm-1"
+            ],
+            "nvme0n1p3": [
+                "dm-0"
+            ]
+        },
+        "uuids": {}
+    },
+    "devices": {
+        "dm-0": {
+            "holders": [
+                "ubuntu--vg-ubuntu--lv"
+            ],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [
+                    "dm-1"
+                ],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "",
+            "sectors": "3900596224",
+            "sectorsize": "512",
+            "size": "1.82 TB",
+            "support_discard": "0",
+            "vendor": null,
+            "virtual": 1
+        },
+        "dm-1": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "",
+            "sectors": "3900588032",
+            "sectorsize": "512",
+            "size": "1.82 TB",
+            "support_discard": "0",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop0": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "8",
+            "sectorsize": "512",
+            "size": "4.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop1": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "267656",
+            "sectorsize": "512",
+            "size": "130.69 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop10": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "113640",
+            "sectorsize": "512",
+            "size": "55.49 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop11": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "130608",
+            "sectorsize": "512",
+            "size": "63.77 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop12": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "113648",
+            "sectorsize": "512",
+            "size": "55.49 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop13": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "151448",
+            "sectorsize": "512",
+            "size": "73.95 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop14": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "151456",
+            "sectorsize": "512",
+            "size": "73.95 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop15": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "136896",
+            "sectorsize": "512",
+            "size": "66.84 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop16": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "136904",
+            "sectorsize": "512",
+            "size": "66.85 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop17": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "99976",
+            "sectorsize": "512",
+            "size": "48.82 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop18": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "97456",
+            "sectorsize": "512",
+            "size": "47.59 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop19": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "292992",
+            "sectorsize": "512",
+            "size": "143.06 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop2": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "267632",
+            "sectorsize": "512",
+            "size": "130.68 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop20": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "90352",
+            "sectorsize": "512",
+            "size": "44.12 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop21": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "90368",
+            "sectorsize": "512",
+            "size": "44.12 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop22": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "295064",
+            "sectorsize": "512",
+            "size": "144.07 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop23": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "197464",
+            "sectorsize": "512",
+            "size": "96.42 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop24": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "516320",
+            "sectorsize": "512",
+            "size": "252.11 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop25": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "168192",
+            "sectorsize": "512",
+            "size": "82.12 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop26": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "22800",
+            "sectorsize": "512",
+            "size": "11.13 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop27": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "515360",
+            "sectorsize": "512",
+            "size": "251.64 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop28": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "37864",
+            "sectorsize": "512",
+            "size": "18.49 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop29": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "279280",
+            "sectorsize": "512",
+            "size": "136.37 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop3": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "360544",
+            "sectorsize": "512",
+            "size": "176.05 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop30": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "279232",
+            "sectorsize": "512",
+            "size": "136.34 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop31": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "337560",
+            "sectorsize": "512",
+            "size": "164.82 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop32": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "447264",
+            "sectorsize": "512",
+            "size": "218.39 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop33": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1056784",
+            "sectorsize": "512",
+            "size": "516.01 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop34": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "716176",
+            "sectorsize": "512",
+            "size": "349.70 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop35": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1371720",
+            "sectorsize": "512",
+            "size": "669.79 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop36": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1057184",
+            "sectorsize": "512",
+            "size": "516.20 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop37": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1032",
+            "sectorsize": "512",
+            "size": "516.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop38": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1241248",
+            "sectorsize": "512",
+            "size": "606.08 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop39": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "917552",
+            "sectorsize": "512",
+            "size": "448.02 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop4": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "360672",
+            "sectorsize": "512",
+            "size": "176.11 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop40": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "19304",
+            "sectorsize": "512",
+            "size": "9.43 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop41": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "280",
+            "sectorsize": "512",
+            "size": "140.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop42": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "896080",
+            "sectorsize": "512",
+            "size": "437.54 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop43": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "47208",
+            "sectorsize": "512",
+            "size": "23.05 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop44": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "187776",
+            "sectorsize": "512",
+            "size": "91.69 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop45": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "47360",
+            "sectorsize": "512",
+            "size": "23.12 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop46": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "909296",
+            "sectorsize": "512",
+            "size": "443.99 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop47": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "355968",
+            "sectorsize": "512",
+            "size": "173.81 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop48": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "355960",
+            "sectorsize": "512",
+            "size": "173.81 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop49": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "2456392",
+            "sectorsize": "512",
+            "size": "1.17 GB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop5": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "10664",
+            "sectorsize": "512",
+            "size": "5.21 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop50": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "808920",
+            "sectorsize": "512",
+            "size": "394.98 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop51": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "2458840",
+            "sectorsize": "512",
+            "size": "1.17 GB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop52": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "620080",
+            "sectorsize": "512",
+            "size": "302.77 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop53": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "336392",
+            "sectorsize": "512",
+            "size": "164.25 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop54": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "336392",
+            "sectorsize": "512",
+            "size": "164.25 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop55": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "149368",
+            "sectorsize": "512",
+            "size": "72.93 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop56": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "149368",
+            "sectorsize": "512",
+            "size": "72.93 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop57": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "362840",
+            "sectorsize": "512",
+            "size": "177.17 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop58": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "362864",
+            "sectorsize": "512",
+            "size": "177.18 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop59": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "504296",
+            "sectorsize": "512",
+            "size": "246.24 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop6": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "14880",
+            "sectorsize": "512",
+            "size": "7.27 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop60": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "32",
+            "sectorsize": "512",
+            "size": "16.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop61": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "504888",
+            "sectorsize": "512",
+            "size": "246.53 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop62": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "149768",
+            "sectorsize": "512",
+            "size": "73.13 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop63": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "24984",
+            "sectorsize": "512",
+            "size": "12.20 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop64": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "22176",
+            "sectorsize": "512",
+            "size": "10.83 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop65": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "142880",
+            "sectorsize": "512",
+            "size": "69.77 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop66": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "104296",
+            "sectorsize": "512",
+            "size": "50.93 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop67": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "98480",
+            "sectorsize": "512",
+            "size": "48.09 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop68": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "463576",
+            "sectorsize": "512",
+            "size": "226.36 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop69": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1136",
+            "sectorsize": "512",
+            "size": "568.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop7": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "215000",
+            "sectorsize": "512",
+            "size": "104.98 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop70": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "1152",
+            "sectorsize": "512",
+            "size": "576.00 KB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop71": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "707112",
+            "sectorsize": "512",
+            "size": "345.27 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop72": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "707112",
+            "sectorsize": "512",
+            "size": "345.27 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop73": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "464088",
+            "sectorsize": "512",
+            "size": "226.61 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop74": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "0",
+            "sectorsize": "512",
+            "size": "0.00 Bytes",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop8": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "213456",
+            "sectorsize": "512",
+            "size": "104.23 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "loop9": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": null,
+            "partitions": {},
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "130608",
+            "sectorsize": "512",
+            "size": "63.77 MB",
+            "support_discard": "4096",
+            "vendor": null,
+            "virtual": 1
+        },
+        "nvme0n1": {
+            "holders": [],
+            "host": "",
+            "links": {
+                "ids": [],
+                "labels": [],
+                "masters": [],
+                "uuids": []
+            },
+            "model": "CT2000P5PSSD8",
+            "partitions": {
+                "nvme0n1p1": {
+                    "holders": [],
+                    "links": {
+                        "ids": [],
+                        "labels": [],
+                        "masters": [],
+                        "uuids": []
+                    },
+                    "sectors": "2201600",
+                    "sectorsize": 512,
+                    "size": "1.05 GB",
+                    "start": "2048",
+                    "uuid": null
+                },
+                "nvme0n1p2": {
+                    "holders": [],
+                    "links": {
+                        "ids": [],
+                        "labels": [],
+                        "masters": [],
+                        "uuids": []
+                    },
+                    "sectors": "4194304",
+                    "sectorsize": 512,
+                    "size": "2.00 GB",
+                    "start": "2203648",
+                    "uuid": null
+                },
+                "nvme0n1p3": {
+                    "holders": [
+                        "dm_crypt-0"
+                    ],
+                    "links": {
+                        "ids": [],
+                        "labels": [],
+                        "masters": [
+                            "dm-0"
+                        ],
+                        "uuids": []
+                    },
+                    "sectors": "3900628992",
+                    "sectorsize": 512,
+                    "size": "1.82 TB",
+                    "start": "6397952",
+                    "uuid": null
+                }
+            },
+            "removable": "0",
+            "rotational": "0",
+            "sas_address": null,
+            "sas_device_handle": null,
+            "scheduler_mode": "none",
+            "sectors": "3907029168",
+            "sectorsize": "512",
+            "serial": "23023D94484F",
+            "size": "1.82 TB",
+            "support_discard": "512",
+            "vendor": null,
+            "virtual": 1
+        }
+    },
+    "discovered_interpreter_python": "/usr/bin/python3.12",
+    "distribution": "Fedora",
+    "distribution_file_parsed": true,
+    "distribution_file_path": "/etc/redhat-release",
+    "distribution_file_variety": "RedHat",
+    "distribution_major_version": "41",
+    "distribution_release": "",
+    "distribution_version": "41",
+    "dns": {
+        "nameservers": [
+            "10.0.2.3",
+            "192.168.68.2"
+        ]
+    },
+    "domain": "",
+    "effective_group_id": 0,
+    "effective_user_id": 0,
+    "env": {
+        "HOME": "/root",
+        "LC_CTYPE": "C.UTF-8",
+        "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "PWD": "/",
+        "SHLVL": "1",
+        "_": "/usr/bin/python3.12",
+        "container": "oci"
+    },
+    "fibre_channel_wwn": [],
+    "fips": false,
+    "form_factor": "Notebook",
+    "fqdn": "105527f7ca65",
+    "gather_subset": [
+        "all"
+    ],
+    "hostname": "105527f7ca65",
+    "hostnqn": "",
+    "is_chroot": false,
+    "iscsi_iqn": "",
+    "kernel": "6.8.0-90-generic",
+    "kernel_version": "#91-Ubuntu SMP PREEMPT_DYNAMIC Tue Nov 18 14:14:30 UTC 2025",
+    "loadavg": {
+        "15m": 1.02685546875,
+        "1m": 3.6884765625,
+        "5m": 1.1845703125
+    },
+    "lsb": {},
+    "lvm": "N/A",
+    "machine": "x86_64",
+    "machine_id": "b7a0e0c4b2744722bca4d46cc539e76b",
+    "memfree_mb": 47507,
+    "memory_mb": {
+        "nocache": {
+            "free": 56037,
+            "used": 7952
+        },
+        "real": {
+            "free": 47507,
+            "total": 63989,
+            "used": 16482
+        },
+        "swap": {
+            "cached": 0,
+            "free": 8191,
+            "total": 8191,
+            "used": 0
+        }
+    },
+    "memtotal_mb": 63989,
+    "module_setup": true,
+    "mounts": [],
+    "nodename": "105527f7ca65",
+    "os_family": "RedHat",
+    "packages": {
+        "alternatives": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "alternatives",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.31"
+            }
+        ],
+        "audit-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "audit-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.1.1"
+            }
+        ],
+        "authselect": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "authselect",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "1.5.0"
+            }
+        ],
+        "authselect-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "authselect-libs",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "1.5.0"
+            }
+        ],
+        "basesystem": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "basesystem",
+                "release": "21.fc41",
+                "source": "rpm",
+                "version": "11"
+            }
+        ],
+        "bash": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "bash",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.2.32"
+            }
+        ],
+        "bzip2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "bzip2",
+                "release": "19.fc41",
+                "source": "rpm",
+                "version": "1.0.8"
+            }
+        ],
+        "bzip2-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "bzip2-libs",
+                "release": "19.fc41",
+                "source": "rpm",
+                "version": "1.0.8"
+            }
+        ],
+        "ca-certificates": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "ca-certificates",
+                "release": "1.0.fc41",
+                "source": "rpm",
+                "version": "2024.2.69_v8.0.401"
+            }
+        ],
+        "coreutils": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "coreutils",
+                "release": "12.fc41",
+                "source": "rpm",
+                "version": "9.5"
+            }
+        ],
+        "coreutils-common": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "coreutils-common",
+                "release": "12.fc41",
+                "source": "rpm",
+                "version": "9.5"
+            }
+        ],
+        "cracklib": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "cracklib",
+                "release": "6.fc41",
+                "source": "rpm",
+                "version": "2.9.11"
+            }
+        ],
+        "crypto-policies": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "crypto-policies",
+                "release": "1.git836bbee.fc41",
+                "source": "rpm",
+                "version": "20250707"
+            }
+        ],
+        "cryptsetup-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "cryptsetup-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.8.1"
+            }
+        ],
+        "curl": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "curl",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "8.9.1"
+            }
+        ],
+        "cyrus-sasl-lib": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "cyrus-sasl-lib",
+                "release": "27.fc41",
+                "source": "rpm",
+                "version": "2.1.28"
+            }
+        ],
+        "dbus": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "dbus",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.14.10"
+            }
+        ],
+        "dbus-broker": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "dbus-broker",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "36"
+            }
+        ],
+        "dbus-common": [
+            {
+                "arch": "noarch",
+                "epoch": 1,
+                "name": "dbus-common",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.14.10"
+            }
+        ],
+        "dbus-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "dbus-libs",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.14.10"
+            }
+        ],
+        "device-mapper": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "device-mapper",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.02.199"
+            }
+        ],
+        "device-mapper-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "device-mapper-libs",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.02.199"
+            }
+        ],
+        "diffutils": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "diffutils",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "3.10"
+            }
+        ],
+        "dnf-data": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "dnf-data",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.24.0"
+            }
+        ],
+        "dnf5": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "dnf5",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.2.17.0"
+            }
+        ],
+        "dnf5-plugins": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "dnf5-plugins",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.2.17.0"
+            }
+        ],
+        "duktape": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "duktape",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "2.7.0"
+            }
+        ],
+        "elfutils-default-yama-scope": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "elfutils-default-yama-scope",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.194"
+            }
+        ],
+        "elfutils-libelf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "elfutils-libelf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.194"
+            }
+        ],
+        "elfutils-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "elfutils-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.194"
+            }
+        ],
+        "expat": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "expat",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.7.2"
+            }
+        ],
+        "fedora-gpg-keys": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "fedora-gpg-keys",
+                "release": "3",
+                "source": "rpm",
+                "version": "41"
+            }
+        ],
+        "fedora-release-common": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "fedora-release-common",
+                "release": "33",
+                "source": "rpm",
+                "version": "41"
+            }
+        ],
+        "fedora-release-container": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "fedora-release-container",
+                "release": "33",
+                "source": "rpm",
+                "version": "41"
+            }
+        ],
+        "fedora-release-identity-container": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "fedora-release-identity-container",
+                "release": "33",
+                "source": "rpm",
+                "version": "41"
+            }
+        ],
+        "fedora-repos": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "fedora-repos",
+                "release": "3",
+                "source": "rpm",
+                "version": "41"
+            }
+        ],
+        "file-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "file-libs",
+                "release": "7.fc41",
+                "source": "rpm",
+                "version": "5.45"
+            }
+        ],
+        "filesystem": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "filesystem",
+                "release": "23.fc41",
+                "source": "rpm",
+                "version": "3.18"
+            }
+        ],
+        "findutils": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "findutils",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "4.10.0"
+            }
+        ],
+        "fmt": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "fmt",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "11.0.2"
+            }
+        ],
+        "gawk": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "gawk",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "5.3.0"
+            }
+        ],
+        "gdbm": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "gdbm",
+                "release": "7.fc41",
+                "source": "rpm",
+                "version": "1.23"
+            }
+        ],
+        "gdbm-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "gdbm-libs",
+                "release": "7.fc41",
+                "source": "rpm",
+                "version": "1.23"
+            }
+        ],
+        "glib2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "glib2",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.82.5"
+            }
+        ],
+        "glibc": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "glibc",
+                "release": "28.fc41",
+                "source": "rpm",
+                "version": "2.40"
+            }
+        ],
+        "glibc-common": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "glibc-common",
+                "release": "28.fc41",
+                "source": "rpm",
+                "version": "2.40"
+            }
+        ],
+        "glibc-minimal-langpack": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "glibc-minimal-langpack",
+                "release": "28.fc41",
+                "source": "rpm",
+                "version": "2.40"
+            }
+        ],
+        "gmp": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "gmp",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "6.3.0"
+            }
+        ],
+        "gnupg2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "gnupg2",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "2.4.5"
+            }
+        ],
+        "gnupg2-smime": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "gnupg2-smime",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "2.4.5"
+            }
+        ],
+        "gnutls": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "gnutls",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.8.10"
+            }
+        ],
+        "gpg-pubkey": [
+            {
+                "arch": null,
+                "epoch": null,
+                "name": "gpg-pubkey",
+                "release": "64d2612c",
+                "source": "rpm",
+                "version": "e99d6ad1"
+            }
+        ],
+        "grep": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "grep",
+                "release": "9.fc41",
+                "source": "rpm",
+                "version": "3.11"
+            }
+        ],
+        "gzip": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "gzip",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.13"
+            }
+        ],
+        "hiredis": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "hiredis",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "1.2.0"
+            }
+        ],
+        "ima-evm-utils-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "ima-evm-utils-libs",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.6.2"
+            }
+        ],
+        "json-c": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "json-c",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "0.17"
+            }
+        ],
+        "kbd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "kbd",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "2.6.4"
+            }
+        ],
+        "kbd-legacy": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "kbd-legacy",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "2.6.4"
+            }
+        ],
+        "kbd-misc": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "kbd-misc",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "2.6.4"
+            }
+        ],
+        "keyutils-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "keyutils-libs",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.6.3"
+            }
+        ],
+        "kmod": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "kmod",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "33"
+            }
+        ],
+        "kmod-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "kmod-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "33"
+            }
+        ],
+        "krb5-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "krb5-libs",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "1.21.3"
+            }
+        ],
+        "libacl": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libacl",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.3.2"
+            }
+        ],
+        "libarchive": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libarchive",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "3.7.4"
+            }
+        ],
+        "libassuan": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libassuan",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.5.7"
+            }
+        ],
+        "libattr": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libattr",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "2.5.2"
+            }
+        ],
+        "libb2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libb2",
+                "release": "12.fc41",
+                "source": "rpm",
+                "version": "0.98.1"
+            }
+        ],
+        "libblkid": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libblkid",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "libbpf": [
+            {
+                "arch": "x86_64",
+                "epoch": 2,
+                "name": "libbpf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.4.7"
+            }
+        ],
+        "libbrotli": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libbrotli",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "1.1.0"
+            }
+        ],
+        "libcap": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcap",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "2.70"
+            }
+        ],
+        "libcap-ng": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcap-ng",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "0.8.5"
+            }
+        ],
+        "libcbor": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcbor",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "0.11.0"
+            }
+        ],
+        "libcom_err": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcom_err",
+                "release": "6.fc41",
+                "source": "rpm",
+                "version": "1.47.1"
+            }
+        ],
+        "libcomps": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcomps",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.1.22"
+            }
+        ],
+        "libcurl": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libcurl",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "8.9.1"
+            }
+        ],
+        "libdnf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libdnf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.75.0"
+            }
+        ],
+        "libdnf5": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libdnf5",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.2.17.0"
+            }
+        ],
+        "libdnf5-cli": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libdnf5-cli",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.2.17.0"
+            }
+        ],
+        "libeconf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libeconf",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "0.6.2"
+            }
+        ],
+        "libevent": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libevent",
+                "release": "14.fc41",
+                "source": "rpm",
+                "version": "2.1.12"
+            }
+        ],
+        "libfdisk": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libfdisk",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "libffi": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libffi",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "3.4.6"
+            }
+        ],
+        "libfido2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libfido2",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.15.0"
+            }
+        ],
+        "libfsverity": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libfsverity",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.6"
+            }
+        ],
+        "libgcc": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libgcc",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "14.3.1"
+            }
+        ],
+        "libgcrypt": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libgcrypt",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "1.11.0"
+            }
+        ],
+        "libgomp": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libgomp",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "14.3.1"
+            }
+        ],
+        "libgpg-error": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libgpg-error",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.50"
+            }
+        ],
+        "libidn2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libidn2",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.8"
+            }
+        ],
+        "libksba": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libksba",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.6.7"
+            }
+        ],
+        "libmodulemd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libmodulemd",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.15.2"
+            }
+        ],
+        "libmount": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libmount",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "libnghttp2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libnghttp2",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "1.62.1"
+            }
+        ],
+        "libnsl2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libnsl2",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.0.1"
+            }
+        ],
+        "libpkgconf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libpkgconf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.0"
+            }
+        ],
+        "libpsl": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libpsl",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "0.21.5"
+            }
+        ],
+        "libpwquality": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libpwquality",
+                "release": "11.fc41",
+                "source": "rpm",
+                "version": "1.4.5"
+            }
+        ],
+        "librepo": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "librepo",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.20.0"
+            }
+        ],
+        "libseccomp": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libseccomp",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.5.5"
+            }
+        ],
+        "libsecret": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libsecret",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.21.7"
+            }
+        ],
+        "libselinux": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libselinux",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "3.7"
+            }
+        ],
+        "libsemanage": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libsemanage",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "3.7"
+            }
+        ],
+        "libsepol": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libsepol",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "3.7"
+            }
+        ],
+        "libsmartcols": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libsmartcols",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "libsolv": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libsolv",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.7.35"
+            }
+        ],
+        "libssh": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libssh",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.11.3"
+            }
+        ],
+        "libssh-config": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "libssh-config",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.11.3"
+            }
+        ],
+        "libstdc++": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libstdc++",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "14.3.1"
+            }
+        ],
+        "libtasn1": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libtasn1",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.0"
+            }
+        ],
+        "libtirpc": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libtirpc",
+                "release": "1.rc3.fc41",
+                "source": "rpm",
+                "version": "1.3.6"
+            }
+        ],
+        "libtool-ltdl": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libtool-ltdl",
+                "release": "12.fc41",
+                "source": "rpm",
+                "version": "2.4.7"
+            }
+        ],
+        "libunistring": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libunistring",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "1.1"
+            }
+        ],
+        "libusb1": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libusb1",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.0.29"
+            }
+        ],
+        "libuuid": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libuuid",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "libverto": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libverto",
+                "release": "9.fc41",
+                "source": "rpm",
+                "version": "0.3.2"
+            }
+        ],
+        "libxcrypt": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libxcrypt",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.5.2"
+            }
+        ],
+        "libxkbcommon": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libxkbcommon",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.7.0"
+            }
+        ],
+        "libxml2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libxml2",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.12.10"
+            }
+        ],
+        "libyaml": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libyaml",
+                "release": "16.fc41",
+                "source": "rpm",
+                "version": "0.2.5"
+            }
+        ],
+        "libzstd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "libzstd",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.5.7"
+            }
+        ],
+        "lua-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "lua-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "5.4.8"
+            }
+        ],
+        "lz4-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "lz4-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.10.0"
+            }
+        ],
+        "mpdecimal": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "mpdecimal",
+                "release": "16.fc41",
+                "source": "rpm",
+                "version": "2.5.1"
+            }
+        ],
+        "mpfr": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "mpfr",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "4.2.1"
+            }
+        ],
+        "ncurses-base": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "ncurses-base",
+                "release": "2.20240629.fc41",
+                "source": "rpm",
+                "version": "6.5"
+            }
+        ],
+        "ncurses-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "ncurses-libs",
+                "release": "2.20240629.fc41",
+                "source": "rpm",
+                "version": "6.5"
+            }
+        ],
+        "nettle": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "nettle",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "3.10"
+            }
+        ],
+        "npth": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "npth",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.7"
+            }
+        ],
+        "openldap": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "openldap",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.6.10"
+            }
+        ],
+        "openssl-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "openssl-libs",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "3.2.6"
+            }
+        ],
+        "p11-kit": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "p11-kit",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "0.25.5"
+            }
+        ],
+        "p11-kit-trust": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "p11-kit-trust",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "0.25.5"
+            }
+        ],
+        "pam": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pam",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "1.6.1"
+            }
+        ],
+        "pam-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pam-libs",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "1.6.1"
+            }
+        ],
+        "pcre2": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pcre2",
+                "release": "1.fc41.1",
+                "source": "rpm",
+                "version": "10.44"
+            }
+        ],
+        "pcre2-syntax": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "pcre2-syntax",
+                "release": "1.fc41.1",
+                "source": "rpm",
+                "version": "10.44"
+            }
+        ],
+        "pcsc-lite": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pcsc-lite",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.1"
+            }
+        ],
+        "pcsc-lite-ccid": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pcsc-lite-ccid",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.6.1"
+            }
+        ],
+        "pcsc-lite-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pcsc-lite-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.1"
+            }
+        ],
+        "pinentry": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pinentry",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "1.3.1"
+            }
+        ],
+        "pkgconf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pkgconf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.0"
+            }
+        ],
+        "pkgconf-m4": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "pkgconf-m4",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.0"
+            }
+        ],
+        "pkgconf-pkg-config": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "pkgconf-pkg-config",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.3.0"
+            }
+        ],
+        "polkit": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "polkit",
+                "release": "1.fc41.2",
+                "source": "rpm",
+                "version": "125"
+            }
+        ],
+        "polkit-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "polkit-libs",
+                "release": "1.fc41.2",
+                "source": "rpm",
+                "version": "125"
+            }
+        ],
+        "polkit-pkla-compat": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "polkit-pkla-compat",
+                "release": "29.fc41",
+                "source": "rpm",
+                "version": "0.1"
+            }
+        ],
+        "popt": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "popt",
+                "release": "7.fc41",
+                "source": "rpm",
+                "version": "1.19"
+            }
+        ],
+        "procps-ng": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "procps-ng",
+                "release": "4.fc41.1",
+                "source": "rpm",
+                "version": "4.0.4"
+            }
+        ],
+        "protobuf-c": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "protobuf-c",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.5.0"
+            }
+        ],
+        "publicsuffix-list-dafsa": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "publicsuffix-list-dafsa",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "20250616"
+            }
+        ],
+        "python-pip-wheel": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "python-pip-wheel",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "24.2"
+            }
+        ],
+        "python-unversioned-command": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "python-unversioned-command",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.13.9"
+            }
+        ],
+        "python3": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.13.9"
+            }
+        ],
+        "python3-dnf": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "python3-dnf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.24.0"
+            }
+        ],
+        "python3-hawkey": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-hawkey",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.75.0"
+            }
+        ],
+        "python3-libcomps": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-libcomps",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.1.22"
+            }
+        ],
+        "python3-libdnf": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-libdnf",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "0.75.0"
+            }
+        ],
+        "python3-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.13.9"
+            }
+        ],
+        "python3-rpm": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-rpm",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "python3-unbound": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3-unbound",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.24.1"
+            }
+        ],
+        "python3.12": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3.12",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.12.12"
+            }
+        ],
+        "python3.12-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "python3.12-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "3.12.12"
+            }
+        ],
+        "qrencode-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "qrencode-libs",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "4.1.1"
+            }
+        ],
+        "readline": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "readline",
+                "release": "10.fc41",
+                "source": "rpm",
+                "version": "8.2"
+            }
+        ],
+        "rootfiles": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "rootfiles",
+                "release": "37.fc41",
+                "source": "rpm",
+                "version": "8.1"
+            }
+        ],
+        "rpm": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "rpm-build-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm-build-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "rpm-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "rpm-plugin-systemd-inhibit": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm-plugin-systemd-inhibit",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "rpm-sequoia": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm-sequoia",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "1.7.0"
+            }
+        ],
+        "rpm-sign-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "rpm-sign-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "4.20.1"
+            }
+        ],
+        "sdbus-cpp": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "sdbus-cpp",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "1.5.0"
+            }
+        ],
+        "sed": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "sed",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "4.9"
+            }
+        ],
+        "setup": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "setup",
+                "release": "8.fc41",
+                "source": "rpm",
+                "version": "2.15.0"
+            }
+        ],
+        "shadow-utils": [
+            {
+                "arch": "x86_64",
+                "epoch": 2,
+                "name": "shadow-utils",
+                "release": "12.fc41",
+                "source": "rpm",
+                "version": "4.15.1"
+            }
+        ],
+        "sqlite-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "sqlite-libs",
+                "release": "5.fc41",
+                "source": "rpm",
+                "version": "3.46.1"
+            }
+        ],
+        "sudo": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "sudo",
+                "release": "2.p1.fc41",
+                "source": "rpm",
+                "version": "1.9.17"
+            }
+        ],
+        "systemd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "systemd-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "systemd-networkd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd-networkd",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "systemd-pam": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd-pam",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "systemd-resolved": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd-resolved",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "systemd-udev": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "systemd-udev",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "256.17"
+            }
+        ],
+        "tar": [
+            {
+                "arch": "x86_64",
+                "epoch": 2,
+                "name": "tar",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "1.35"
+            }
+        ],
+        "tpm2-tss": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "tpm2-tss",
+                "release": "3.fc41",
+                "source": "rpm",
+                "version": "4.1.3"
+            }
+        ],
+        "tzdata": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "tzdata",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2025b"
+            }
+        ],
+        "unbound-anchor": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "unbound-anchor",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.24.1"
+            }
+        ],
+        "unbound-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "unbound-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.24.1"
+            }
+        ],
+        "util-linux-core": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "util-linux-core",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "2.40.4"
+            }
+        ],
+        "vim-data": [
+            {
+                "arch": "noarch",
+                "epoch": 2,
+                "name": "vim-data",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "9.1.1914"
+            }
+        ],
+        "vim-minimal": [
+            {
+                "arch": "x86_64",
+                "epoch": 2,
+                "name": "vim-minimal",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "9.1.1914"
+            }
+        ],
+        "xkeyboard-config": [
+            {
+                "arch": "noarch",
+                "epoch": null,
+                "name": "xkeyboard-config",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.42"
+            }
+        ],
+        "xz": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "xz",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "5.8.1"
+            }
+        ],
+        "xz-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": 1,
+                "name": "xz-libs",
+                "release": "4.fc41",
+                "source": "rpm",
+                "version": "5.8.1"
+            }
+        ],
+        "zchunk-libs": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "zchunk-libs",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.5.1"
+            }
+        ],
+        "zlib-ng-compat": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "zlib-ng-compat",
+                "release": "2.fc41",
+                "source": "rpm",
+                "version": "2.2.3"
+            }
+        ],
+        "zstd": [
+            {
+                "arch": "x86_64",
+                "epoch": null,
+                "name": "zstd",
+                "release": "1.fc41",
+                "source": "rpm",
+                "version": "1.5.7"
+            }
+        ]
+    },
+    "pkg_mgr": "dnf5",
+    "proc_cmdline": {
+        "BOOT_IMAGE": "/vmlinuz-6.8.0-90-generic",
+        "intel_iommu": "on",
+        "quiet": true,
+        "ro": true,
+        "root": "/dev/mapper/ubuntu--vg-ubuntu--lv",
+        "splash": true,
+        "systemd.unified_cgroup_hierarchy": "1",
+        "vt.handoff": "7"
+    },
+    "processor": [
+        "0",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "1",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "2",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "3",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "4",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "5",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "6",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "7",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "8",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "9",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "10",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U",
+        "11",
+        "GenuineIntel",
+        "13th Gen Intel(R) Core(TM) i7-1355U"
+    ],
+    "processor_cores": 10,
+    "processor_count": 1,
+    "processor_nproc": 12,
+    "processor_threads_per_core": 1,
+    "processor_vcpus": 10,
+    "product_name": "Latitude 3540",
+    "product_serial": "NA",
+    "product_uuid": "NA",
+    "product_version": "NA",
+    "python": {
+        "executable": "/usr/bin/python3.12",
+        "has_sslcontext": true,
+        "type": "cpython",
+        "version": {
+            "major": 3,
+            "micro": 12,
+            "minor": 12,
+            "releaselevel": "final",
+            "serial": 0
+        },
+        "version_info": [
+            3,
+            12,
+            12,
+            "final",
+            0
+        ]
+    },
+    "python_version": "3.12.12",
+    "real_group_id": 0,
+    "real_user_id": 0,
+    "selinux": {
+        "status": "disabled"
+    },
+    "selinux_python_present": true,
+    "service_mgr": "systemd",
+    "swapfree_mb": 8191,
+    "swaptotal_mb": 8191,
+    "system": "Linux",
+    "system_capabilities": [
+        "ep"
+    ],
+    "system_capabilities_enforced": "True",
+    "system_vendor": "Dell Inc.",
+    "uptime_seconds": 7403,
+    "user_dir": "/root",
+    "user_gecos": "Super User",
+    "user_gid": 0,
+    "user_id": "root",
+    "user_shell": "/bin/bash",
+    "user_uid": 0,
+    "userspace_architecture": "x86_64",
+    "userspace_bits": "64",
+    "virtualization_role": "guest",
+    "virtualization_tech_guest": [
+        "container",
+        "oci"
+    ],
+    "virtualization_tech_host": [
+        "kvm"
+    ],
+    "virtualization_type": "container"
+}

@@ -4,77 +4,77 @@
 
 ---
 driver:
-  name: default
+  name: "default"
 dependency:
-  name: galaxy
+  name: "galaxy"
   options:
-    requirements-file: ../shared/kubevirt-requirements.yml
+    requirements-file: "../shared/kubevirt-requirements.yml"
 platforms:
 #  # Needs authentication to pull image
-#  - name: facts-rhel9
-#    image: registry.redhat.io/rhel9/rhel-guest-image
-#    namespace: molecule
+#  - name: "rhel9-kubevirt"
+#    image: "registry.redhat.io/rhel9/rhel-guest-image"
+#    namespace: "molecule"
 #    ssh_service:
-#      type: NodePort
-#    ansible_user: cloud-user
-#    memory: 1Gi
-  - name: facts-centos9
-    image: ghcr.io/clifford2/kubevirt-containerdisk:centos-stream9.v20260113.0
-    namespace: molecule
+#      type: "NodePort"
+#    ansible_user: "cloud-user"
+#    memory: "1Gi"
+  - name: "centos9-kubevirt"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:centos-stream9.v20260113.0"
+    namespace: "molecule"
     ssh_service:
-      type: NodePort
-    ansible_user: molecule
-    memory: 1Gi
-  - name: facts-centos10
-    image: ghcr.io/clifford2/kubevirt-containerdisk:centos-stream10.v20260113.0
-    namespace: molecule
+      type: "NodePort"
+    ansible_user: "molecule"
+    memory: "1Gi"
+  - name: "centos10-kubevirt"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:centos-stream10.v20260113.0"
+    namespace: "molecule"
     ssh_service:
-      type: NodePort
-    ansible_user: molecule
-    memory: 1Gi
-#  - name: facts-debian12
-#    image: ghcr.io/clifford2/kubevirt-containerdisk:debian12.v20260112-2355
-#    namespace: molecule
+      type: "NodePort"
+    ansible_user: "molecule"
+    memory: "1Gi"
+#  - name: "debian12-kubevirt"
+#    image: "ghcr.io/clifford2/kubevirt-containerdisk:debian12.v20260112-2355"
+#    namespace: "molecule"
 #    ssh_service:
-#      type: NodePort
-#    ansible_user: molecule
-#    memory: 1Gi
-  - name: facts-opensuse15
-    image: ghcr.io/clifford2/kubevirt-containerdisk:opensuse-15.6.v1.0.2-2.1
-    namespace: molecule
+#      type: "NodePort"
+#    ansible_user: "molecule"
+#    memory: "1Gi"
+  - name: "opensuse15-kubevirt"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:opensuse-15.6.v1.0.2-2.1"
+    namespace: "molecule"
     ssh_service:
-      type: NodePort
-    ansible_user: molecule
-    memory: 1Gi
-  - name: facts-ubuntu24
-    image: ghcr.io/clifford2/kubevirt-containerdisk:ubuntu2404.v20260108
-    namespace: molecule
+      type: "NodePort"
+    ansible_user: "molecule"
+    memory: "1Gi"
+  - name: "ubuntu24-kubevirt"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:ubuntu2404.v20260108"
+    namespace: "molecule"
     ssh_service:
-      type: NodePort
-    ansible_user: molecule
-    memory: 1Gi
+      type: "NodePort"
+    ansible_user: "molecule"
+    memory: "1Gi"
 provisioner:
-  name: ansible
+  name: "ansible-kubevirt"
   playbooks:
-    create: ../shared/kubevirt-create.yml
-    destroy: ../shared/kubevirt-destroy.yml
+    create: "../shared/kubevirt-create.yml"
+    destroy: "../shared/kubevirt-destroy.yml"
   config_options:
     defaults:
-      interpreter_python: auto_silent
-      callback_whitelist: profile_tasks, timer, yaml
+      interpreter_python: "auto_silent"
+      callback_whitelist: "profile_tasks, timer, yaml"
     ssh_connection:
       pipelining: false
   log: true
 verifier:
-  name: ansible
+  name: "ansible-kubevirt"
 scenario:
   test_sequence:
-    - dependency
-    - destroy
-    - syntax
-    - create
-    - converge
-    - idempotence
-    - side_effect
-    - verify
-    - destroy
+    - "dependency"
+    - "destroy"
+    - "syntax"
+    - "create"
+    - "converge"
+    - "idempotence"
+    - "side_effect"
+    - "verify"
+    - "destroy"

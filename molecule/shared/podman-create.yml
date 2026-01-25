@@ -23,11 +23,11 @@
         volumes: "{{ item.volumes | default(omit) }}"
         capabilities: "{{ item.capabilities | default(omit) }}"
         systemd: "{{ item.systemd | default(omit) }}"
-        state: started
+        state: "started"
         command: "{{ item.command | default('sleep 1d') }}"
         # bash -c "while true; do sleep 10000; done"
-        log_driver: json-file
-      register: result
+        log_driver: "json-file"
+      register: "molecule_podman_container_result"
       loop: "{{ molecule_yml.platforms }}"
 
     - name: "Print some info"
@@ -43,7 +43,7 @@
         not item.container.State.Running
       ansible.builtin.include_tasks:
         file: podman-create-fail.yml
-      loop: "{{ result.results }}"
+      loop: "{{ molecule_podman_container_result.results }}"
       loop_control:
         label: "{{ item.container.Name }}"
 
@@ -55,9 +55,9 @@
               molecule:
                 hosts:
                   "{{ item.name }}":
-                    ansible_connection: containers.podman.podman
-                    become_method: containers.podman.podman_unshare
-                    ansible_user: root
+                    ansible_connection: "containers.podman.podman"
+                    become_method: "containers.podman.podman_unshare"
+                    ansible_user: "root"
       ansible.builtin.set_fact:
         molecule_inventory: >
           {{ molecule_inventory | combine(inventory_partial_yaml | from_yaml, recursive=true) }}
@@ -73,7 +73,7 @@
         mode: "0600"
 
     - name: "Force inventory refresh"
-      ansible.builtin.meta: refresh_inventory
+      ansible.builtin.meta: "refresh_inventory"
 
     - name: "Fail if molecule group is missing"
       ansible.builtin.assert:
@@ -90,7 +90,7 @@
 
     - name: "Check uname"
       ansible.builtin.raw: "uname -a"
-      register: uname_result
+      register: "uname_result"
       changed_when: false
 
     - name: "Read /etc/os-release"

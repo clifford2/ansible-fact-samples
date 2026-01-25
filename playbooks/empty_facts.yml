@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: © 2025 Clifford Weinmann
+# SPDX-License-Identifier: MIT-0
+#
+# Show empty facts, to verify what it contains.
+# Spoiler: it contains: {}
+
+---
+- name: "Gather Ansible facts with ansible.builtin.setup"
+  hosts: "localhost"
+  become: false
+  gather_facts: false
+
+  tasks:
+
+    - name: "Show facts"
+      ansible.builtin.debug:
+        msg: "{{ ansible_facts | to_nice_json }}"

@@ -1,0 +1,51 @@
+- name: "Gather package facts"
+  hosts: "all"
+  become: false
+  gather_facts: false
+  vars_files:
+    - "../vars/common.yml"
+  tasks:
+
+    # Intentionally not using date_time facts here to keep ansible_facts clean
+    - name: "Get local date for file names"
+      ansible.builtin.command: "date '+%Y%m%d'"
+      register: "today"
+      delegate_to: "localhost"
+      run_once: true
+
+    - name: "Show subset"
+      ansible.builtin.debug:
+        msg: "Gathering facts for subset {{ fact_sample_subset }}"
+
+    - name: "Clear cached facts"
+      ansible.builtin.meta: "clear_facts"
+
+    - name: "Gather useful subset of variables about remote hosts"
+      ansible.builtin.setup:
+        gather_subset:
+          - "{{ fact_sample_subset }}"
+
+    - name: "Save facts to different var before collecting OS info for path"
+      ansible.builtin.set_fact:
+        sample_facts: "{{ ansible_facts }}"
+
+    - name: "Show subset {{ fact_sample_subset }} facts to localhost file"
+      ansible.builtin.debug:
+        msg: "{{ sample_facts }}"
+
+    - name: "Gather OS info for path"
+      ansible.builtin.setup:
+        gather_subset:
+          # - "system"
+          - "os_family"
+          - "distribution"
+
+    - name: "Save subset facts to localhost file"
+      ansible.builtin.copy:
+        content: "{{ sample_facts | to_nice_json }}"
+        dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
+        mode: "0644"
+      vars:
+        local_save_dir: "{{ (local_save_basedir, ansible_facts['system'] | lower, ansible_facts['distribution'] | lower) | ansible.builtin.path_join }}"
+        local_save_file: "{{ inventory_hostname }}-{{ fact_sample_subset }}-{{ today.stdout }}"
+      delegate_to: "localhost"

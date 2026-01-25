@@ -1,0 +1,385 @@
+# SPDX-FileCopyrightText: © 2025 Clifford Weinmann
+# SPDX-License-Identifier: MIT-0
+#
+# Gather facts by individual subset
+# List of subsets obtained from Ansible 2.20.1
+
+---
+- name: "Local preparation"
+  hosts: "all"
+  become: false
+  gather_facts: false
+  vars_files:
+    - "../vars/common.yml"
+  tasks:
+
+    - name: "Gather OS info"
+      ansible.builtin.setup:
+        gather_subset:
+          # - "system"
+          - "os_family"
+          - "distribution"
+
+    - name: "Ensure local output directory exists"
+      ansible.builtin.file:
+        path: "{{ local_save_dir }}"
+        state: "directory"
+        mode: "0755"
+      vars:
+        local_save_dir: "{{ (local_save_basedir, ansible_facts['system'] | lower, ansible_facts['distribution'] | lower) | ansible.builtin.path_join }}"
+      delegate_to: "localhost"
+
+- name: "Gather package facts"
+  hosts: "all"
+  become: false
+  gather_facts: false
+  vars_files:
+    - "../vars/common.yml"
+  tasks:
+
+    # Intentionally not using date_time facts here to keep ansible_facts clean
+    - name: "Get local date for file names"
+      ansible.builtin.command: "date '+%Y%m%d'"
+      register: "today"
+      delegate_to: "localhost"
+      run_once: true
+
+    - name: "Gather information about installed packages"
+      ansible.builtin.package_facts:
+        manager: "auto"
+        strategy: "all"
+
+    - name: "Save package facts to localhost file"
+      ansible.builtin.copy:
+        content: "{{ ansible_facts | to_nice_json }}"
+        dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
+        mode: "0644"
+      vars:
+        local_save_dir: "{{ (local_save_basedir, ansible_facts['system'] | lower, ansible_facts['distribution'] | lower) | ansible.builtin.path_join }}"
+        local_save_file: "{{ inventory_hostname }}-packages-{{ today.stdout }}"
+      delegate_to: "localhost"
+
+- name: "Gather all_ipv4_addresses facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "all_ipv4_addresses"
+
+- name: "Gather all_ipv6_addresses facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "all_ipv6_addresses"
+
+- name: "Gather apparmor facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "apparmor"
+
+- name: "Gather architecture facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "architecture"
+
+- name: "Gather caps facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "caps"
+
+- name: "Gather chroot facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "chroot"
+
+- name: "Gather cmdline facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "cmdline"
+
+- name: "Gather date_time facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "date_time"
+
+- name: "Gather default_ipv4 facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "default_ipv4"
+
+- name: "Gather default_ipv6 facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "default_ipv6"
+
+- name: "Gather devices facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "devices"
+
+- name: "Gather distribution facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "distribution"
+
+- name: "Gather distribution_major_version facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "distribution_major_version"
+
+- name: "Gather distribution_release facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "distribution_release"
+
+- name: "Gather distribution_version facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "distribution_version"
+
+- name: "Gather dns facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "dns"
+
+- name: "Gather effective_group_ids facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "effective_group_ids"
+
+- name: "Gather effective_user_id facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "effective_user_id"
+
+- name: "Gather env facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "env"
+
+- name: "Gather facter facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "facter"
+
+- name: "Gather fips facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "fips"
+
+- name: "Gather hardware facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "hardware"
+
+- name: "Gather interfaces facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "interfaces"
+
+- name: "Gather is_chroot facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "is_chroot"
+
+- name: "Gather iscsi facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "iscsi"
+
+- name: "Gather kernel facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "kernel"
+
+- name: "Gather local facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "local"
+
+- name: "Gather lsb facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "lsb"
+
+- name: "Gather machine facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "machine"
+
+- name: "Gather machine_id facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "machine_id"
+
+- name: "Gather mounts facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "mounts"
+
+- name: "Gather network facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "network"
+
+- name: "Gather ohai facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ohai"
+
+- name: "Gather os_family facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "os_family"
+
+- name: "Gather pkg_mgr facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "pkg_mgr"
+
+- name: "Gather platform facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "platform"
+
+- name: "Gather processor facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "processor"
+
+- name: "Gather processor_cores facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "processor_cores"
+
+- name: "Gather processor_count facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "processor_count"
+
+- name: "Gather python facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "python"
+
+- name: "Gather python_version facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "python_version"
+
+- name: "Gather real_user_id facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "real_user_id"
+
+- name: "Gather selinux facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "selinux"
+
+- name: "Gather service_mgr facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "service_mgr"
+
+- name: "Gather ssh_host_key_dsa_public facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_host_key_dsa_public"
+
+- name: "Gather ssh_host_key_ecdsa_public facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_host_key_ecdsa_public"
+
+- name: "Gather ssh_host_key_ed25519_public facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_host_key_ed25519_public"
+
+- name: "Gather ssh_host_key_rsa_public facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_host_key_rsa_public"
+
+- name: "Gather ssh_host_pub_keys facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_host_pub_keys"
+
+- name: "Gather ssh_pub_keys facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "ssh_pub_keys"
+
+- name: "Gather system facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "system"
+
+- name: "Gather system_capabilities facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "system_capabilities"
+
+- name: "Gather system_capabilities_enforced facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "system_capabilities_enforced"
+
+- name: "Gather user facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user"
+
+- name: "Gather user_dir facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_dir"
+
+- name: "Gather user_gecos facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_gecos"
+
+- name: "Gather user_gid facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_gid"
+
+- name: "Gather user_id facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_id"
+
+- name: "Gather user_shell facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_shell"
+
+- name: "Gather user_uid facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "user_uid"
+
+- name: "Gather virtual facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "virtual"
+
+- name: "Gather virtualization_role facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "virtualization_role"
+
+- name: "Gather virtualization_tech_guest facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "virtualization_tech_guest"
+
+- name: "Gather virtualization_tech_host facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "virtualization_tech_host"
+
+- name: "Gather virtualization_type facts"
+  ansible.builtin.import_playbook: "include-gather-subset.yml"
+  vars:
+    fact_sample_subset: "virtualization_type"

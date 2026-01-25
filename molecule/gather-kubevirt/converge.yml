@@ -4,4 +4,4 @@
 
 ---
 - name: Include gather playbook
-  ansible.builtin.import_playbook: ../../playbooks/gather.yml
+  ansible.builtin.import_playbook: ../../playbooks/gather-all.yml

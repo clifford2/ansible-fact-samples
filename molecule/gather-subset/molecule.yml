@@ -1,0 +1,29 @@
+# SPDX-FileCopyrightText: Copyright © 2025 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+---
+driver:
+  name: "default"
+  options:
+    managed: false
+    login_cmd_template: "podman exec -ti {instance} bash"
+    ansible_connection_options:
+      ansible_connection: "containers.podman.podman"
+dependency:
+  name: "galaxy"
+  options:
+    requirements-file: "molecule/podman/collections.yml"
+provisioner:
+  name: "ansible"
+  playbooks:
+    create: "../shared/podman-create.yml"
+    destroy: "../shared/podman-destroy.yml"
+platforms:
+  # Red Hat Universal Base Image 10
+  - name: "ubi10-podman"
+    image: "registry.access.redhat.com/ubi10/ubi-init:10.1-1763368398"
+    command: "/sbin/init"
+  # Debian 13 (Trixie)
+  - name: "debian13-podman"
+    image: "ghcr.io/clifford2/molecule-platform:debian13.v1.0.2"
+    command: "/sbin/init"
