@@ -26,7 +26,7 @@ platforms:
     ansible_user: "molecule"
     memory: "1Gi"
   - name: "centos10-kubevirt"
-    image: "ghcr.io/clifford2/kubevirt-containerdisk:centos-stream10.v20260113.0"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:centos-stream10.v20260421.0"
     namespace: "molecule"
     ssh_service:
       type: "NodePort"
@@ -47,7 +47,7 @@ platforms:
     ansible_user: "molecule"
     memory: "1Gi"
   - name: "ubuntu24-kubevirt"
-    image: "ghcr.io/clifford2/kubevirt-containerdisk:ubuntu2404.v20260108"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:ubuntu2404.v20260323"
     namespace: "molecule"
     ssh_service:
       type: "NodePort"
