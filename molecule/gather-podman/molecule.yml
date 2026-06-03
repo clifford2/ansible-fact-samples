@@ -84,6 +84,10 @@ platforms:
     image: "ghcr.io/clifford2/molecule-platform:ubuntu2404.v1.0.4"
     command: "/sbin/init"
   # Ubuntu 26.04 LTS
-  - name: "molecule-example-ubuntu2604"
+  - name: "ubuntu2604-podman"
     image: "ghcr.io/clifford2/molecule-platform:ubuntu2604.v1.0.0"
     command: "/sbin/init"
+  # Alpine
+  # Local image test, built from ../../files/Containerfile.alpine
+  # - name: "alpine-podman"
+  #   image: "alpine-openrc:dev"
