@@ -20,7 +20,7 @@ Available samples so far include:
 	- SLES
 	- Ubuntu
 - macOS
-- Windows Server 2022
+- Windows Server 2016, 2019, 2022, 2025
 - AIX 7.1, 7.2, 7.3
 - Miktotik RouterOS
 - VyOS
