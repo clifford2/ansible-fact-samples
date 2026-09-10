@@ -20,11 +20,7 @@
       ansible.builtin.setup:
         gather_subset:
           - "date_time"
-      when: ansible_date_time is undefined
-
-    - name: "Construct output file name"
-      ansible.builtin.set_fact:
-        local_save_file: "{{ (play_hosts | ansible.utils.index_of('eq', inventory_hostname) | string) + '-' + ansible_date_time.iso8601_basic_short }}"
+      when: "ansible_facts['date_time'] is undefined"
 
     - name: "Ensure local output directory exists"
       ansible.builtin.file:
@@ -40,4 +36,9 @@
       ansible.builtin.copy:
         content: "{{ ansible_facts | to_nice_json }}"
         dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
+        mode: "0644"
+      vars:
+        local_time_str: "{{ ansible_facts['date_time']['year'] }}{{ ansible_facts['date_time']['month'] }}{{ ansible_facts['date_time']['day'] }}"
+        # local_save_file: "{{ (play_hosts | ansible.utils.index_of('eq', inventory_hostname) | string) + '-' + ansible_facts['date_time']['iso8601_basic_short'] }}"
+        local_save_file: "{{ inventory_hostname }}-{{ local_time_str }}"
       delegate_to: "localhost"
