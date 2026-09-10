@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: © 2026 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
+---
+- name: "Gather Ansible facts for Mikrotik RouterOS devices"
+  hosts: "all"
+  become: false
+  gather_facts: false
+  vars_files:
+    - "../vars/common.yml"
+
+  tasks:
+
+    - name: "Construct output directory name"
+      ansible.builtin.set_fact:
+        local_save_dir: "{{ (local_save_basedir, 'network', 'routeros') | ansible.builtin.path_join }}"
+
+    - name: "Collect date_time info"
+      ansible.builtin.setup:
+        gather_subset:
+          - "date_time"
+      when: "ansible_facts['date_time'] is undefined"
+
+    - name: "Ensure local output directory exists"
+      ansible.builtin.file:
+        path: "{{ local_save_dir }}"
+        state: "directory"
+        mode: "0755"
+      delegate_to: "localhost"
+
+    - name: "Gather RouterOS facts"
+      community.routeros.facts:
+        gather_subset: "all"
+      # register: "routeros_facts"
+
+    - name: "Save facts to localhost file"
+      ansible.builtin.copy:
+        # content: "{{ ansible_facts | to_nice_json }}"
+        # content: "{{ routeros_facts['ansible_facts'] | to_nice_json }}"
+        content: "{{ net_facts | to_nice_json }}"
+        dest: "{{ (local_save_dir, local_save_file) | ansible.builtin.path_join }}.json"
+        mode: "0644"
+      vars:
+        local_time_str: "{{ ansible_facts['date_time']['year'] }}{{ ansible_facts['date_time']['month'] }}{{ ansible_facts['date_time']['day'] }}"
+        local_save_file: "{{ inventory_hostname }}-{{ local_time_str }}"
+        net_facts: >-
+          {{
+            ansible_facts
+            | dict2items
+            | selectattr('key', 'match', '^net_')
+            | items2dict
+          }}
+      delegate_to: "localhost"

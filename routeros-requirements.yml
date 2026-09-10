@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: © 2026 Clifford Weinmann
+#
+# SPDX-License-Identifier: MIT-0
+
+---
+collections:
+  - name: ansible.netcommon
+  - name: community.network
+  - name: community.routeros
+  - name: ansible.utils

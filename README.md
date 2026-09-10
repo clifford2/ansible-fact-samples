@@ -74,11 +74,12 @@ For AIX we need to ensure that Python 3 is installed first. In IBM Cloud (as of 
 For Mikrotik RouterOS, connect by specifying `ansible_connection` & `ansible_network_os` as per this example:
 
 ```sh
+ansible-galaxy collection install --upgrade -r ./routeros-requirements.yml
 ansible-playbook -i 192.168.122.216, \
   -e ansible_user=admin \
   -e ansible_connection=ansible.netcommon.network_cli \
   -e ansible_network_os=community.network.routeros \
-  playbooks/gather-all.yml
+  playbooks/routeros-gather.yml
 ```
 
 ### VyOS
