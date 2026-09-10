@@ -40,7 +40,7 @@ platforms:
 #    ansible_user: "molecule"
 #    memory: "1Gi"
   - name: "opensuse15-kubevirt"
-    image: "ghcr.io/clifford2/kubevirt-containerdisk:opensuse-15.6.v1.0.2-2.87"
+    image: "ghcr.io/clifford2/kubevirt-containerdisk:opensuse-15.6.v1.0.2-2.94"
     namespace: "molecule"
     ssh_service:
       type: "NodePort"
